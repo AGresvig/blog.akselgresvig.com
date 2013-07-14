@@ -1,0 +1,20 @@
+---
+title: Home
+layout: default
+isPage: true
+---
+  
+header
+  h1 Welcome to my blog!
+  p I write about development and all kinds of tech shit that interests me. Keep in touch!
+each post in getCollection("posts").toJSON()
+  section
+    h2
+      a(href=post.url)= post.title
+    span On 
+      != post.date.toDateString()
+    .tags
+      h4 Tags:
+      each tag in post.tags
+        li= tag
+    p= post.summary
