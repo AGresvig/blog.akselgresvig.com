@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+h1= document.title
+span= document.date.toDateString()
+.tags
+  each tag in document.tags
+    li= tag
+.post-content!= content
