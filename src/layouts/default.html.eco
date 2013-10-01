@@ -24,8 +24,10 @@
 
         <div class="header-container">
             <header class="wrapper clearfix">
+                <h4 class="subtitle">Front- to back-end, mobile to desktop - my thoughts & experiences</h4>
+                
                 <h1 class="title">
-                    <a href="/">Aksel Gresvig</a>
+                    <a href="/">akselgresvig.com</a>
                 </h1>
                 <nav>
                     <ul>
@@ -64,7 +66,9 @@
 
         <div class="footer-container">
             <footer class="wrapper">
-                <h3>footer</h3>
+                <h2 class="title">akselgresvig.com</h2>
+                <p>Created with passion in Norway & Spain</p>
+                <span>@AGresvig</span>
             </footer>
         </div>
 
