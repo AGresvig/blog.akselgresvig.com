@@ -5,16 +5,28 @@ isPage: true
 ---
   
 header
-  h1 Jeg elsker skatta mi
-  p I write about development and all kinds of tech shit that interests me. Keep in touch!
+  h1 Welcome to my blog
+  p I write about development and all kinds of tech stuff that I get my hands on. Keep in touch!
+
 each post in getCollection("posts").toJSON()
   section
     h2
       a(href=post.url)= post.title
-    span On 
-      != post.date.toDateString()
-    .tags
-      h4 Tags:
-      each tag in post.tags
-        li= tag
+    .post-metadata  
+      span On 
+        != post.date.toDateString()
+      .tags
+        span in
+        ul
+          //- List tags with links in a comma separated list (no comma after last tag)
+          each tag, index in post.tags
+            li
+              a(href='tags/'+tag)= tag
+              if(index < post.tags.length-1)
+                ,
+
     p= post.summary
+
+footer
+  h3 article footer h3
+  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.
