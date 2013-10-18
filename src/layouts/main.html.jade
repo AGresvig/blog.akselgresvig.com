@@ -1,0 +1,37 @@
+---
+layout: skeleton
+---
+
+.header-container
+  header.wrapper.clearfix
+    
+    nav: ul
+      li.active: a(href='/') TECH
+      li: a(href='/') MUSIC
+      li: a(href='/') PHOTO
+
+    //h4.subtitle Front to back baby
+    h1.title
+      a(href='/') akselgresvig.com
+
+.main-container
+  .main.wrapper.clearfix
+    article!= content
+
+    aside
+      h3 Aside
+      p.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante.
+
+    //for sticky footer
+    .push
+
+.footer-container
+  footer.wrapper
+    h2.title
+      a(href='/') akselgresvig.com
+    p Created with passion in Norway & Spain
+    a(href='https://www.twitter.com/agresvig', target='blank') @AGresvig
+
+
+
