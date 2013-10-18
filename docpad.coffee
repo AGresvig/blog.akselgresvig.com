@@ -21,12 +21,12 @@ docpadConfig = {
 
             # The website description (for SEO)
             description: """
-                The personal blog of developer Aksel Gresvig. A technical oriented blgo on web technologies.
+                The personal blog of developer Aksel Gresvig. A technical oriented blog on web technologies.
                 """
 
             # The website keywords (for SEO) separated by commas
             keywords: """
-                web development, javascript, node.js, nodejs, development, architecture, coffescript, java, mv*, docpad, backbone
+                web development, frontend, javascript, node.js, nodejs, development, architecture, coffescript, java, mv*, docpad, backbone, angular
                 """
 
             # The website author's name
@@ -36,7 +36,7 @@ docpadConfig = {
             email: "aksel@agresvig.com"
 
             # Your company's name
-            copyright: "© AGresvig 2012"
+            copyright: "© AGresvig 2013"
 
             # Styles
             styles: [
