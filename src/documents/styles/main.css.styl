@@ -4,7 +4,7 @@
 @import 'nib'
 
 /* ===================
-    FONTS
+    SITEWIDE FONTS
     =================== */
 
 /*
@@ -110,14 +110,13 @@ header h4.subtitle
     z-index: 100
 
     header 
-        margin: 0 0 0 1em
         .title 
             line-height: 1em
             margin: 0 0 -3px 0
         .subtitle
             margin: 1em 0 -.3em .3em
 
-.title
+footer .title
     float:none
 
 .main-container
@@ -155,6 +154,30 @@ footer.wrapper
         padding:0
         
 /* ============= End Index Page ================*/
+
+
+/* ===================
+    Navigation
+   =================== */
+header nav 
+    li.active a, a:hover, a:active
+        color: #999
+
+    a, a:visited
+        //Fonts
+        color: #999
+        font-size: 1.2em
+        text-transform: uppercase
+    
+        //Looks
+        background: none
+
+        //Layout
+        //margin: 0 0 1em 1em
+        //padding: 0
+
+/* ============= End Navigation ================*/
+
 
 
 /* ===================
