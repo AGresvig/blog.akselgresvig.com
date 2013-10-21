@@ -43,14 +43,17 @@ docpadConfig = {
                 "/styles/vendor/initializr.css",
                 "/styles/vendor/normalize.css",
                 "/styles/vendor/highlightjs/solarized_light.css",
+                "/styles/responsive-nav.css",
+                "/styles/icomoon.css",
                 "/styles/main.css"
             ]
 
             # Scripts
             scripts: [
                 "/vendor/jquery-1.10.1.min.js",
-                "/scripts/main.js",
-                "/vendor/modernizr-2.6.2-respond-1.1.0.min.js"
+                "/vendor/modernizr-2.6.2-respond-1.1.0.min.js",
+                "/vendor/responsive-nav.js",
+                "/scripts/main.js"
             ]
 
         getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title

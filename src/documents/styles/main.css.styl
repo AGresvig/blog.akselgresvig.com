@@ -74,7 +74,7 @@ p + p
     line-height: 1em
     
 header .title
-    font-size: 2.5em
+    font-size: 2.8em
     @media only screen and (min-width: 768px)
         font-size: 3em
     @media only screen and (min-width: 1140px)
@@ -112,7 +112,7 @@ header h4.subtitle
     header 
         .title 
             line-height: 1em
-            margin: 0 0 -3px 0
+            margin: 17px 0 -3px 0
         .subtitle
             margin: 1em 0 -.3em .3em
 
@@ -164,17 +164,26 @@ header nav
         color: #999
 
     a, a:visited
-        //Fonts
         color: #999
         font-size: 1.2em
         text-transform: uppercase
-    
-        //Looks
-        background: none
 
-        //Layout
-        //margin: 0 0 1em 1em
-        //padding: 0
+/**** Responsive navigation, based on responsive-nav.com ****/
+
+/** Override some Initializr styles **/
+.nav-collapse     
+    li:first-child a
+        margin-left: inherit
+    
+    a
+        float: left
+        width: inherit
+        margin: inherit
+        margin-bottom: 10px
+        padding: 15px 2%
+        background: #002b36
+
+/**** Responsive naviation ****/
 
 /* ============= End Navigation ================*/
 
