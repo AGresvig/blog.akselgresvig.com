@@ -5,15 +5,15 @@ isPage: true
 ---
   
 header
-  h1 Welcome to my blog
-  p I write about development and all kinds of tech stuff that I get my hands on. Keep in touch!
+  //h1 Welcome to my blog
+  //p I write about development and all kinds of tech stuff that I get my hands on. Keep in touch!
 
 each post in getCollection("posts").toJSON()
-  section
+  section.post-item
     h2
       a(href=post.url)= post.title
     .post-metadata  
-      span On 
+      span Posted on 
         != post.date.toDateString()
       .tags
         span in
