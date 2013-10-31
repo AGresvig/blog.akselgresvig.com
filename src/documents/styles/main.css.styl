@@ -66,28 +66,38 @@ p + p
 
 /*** Logo/Title ***/
 .title
-.footer-container footer .title
     font-family: 'Oswald', sans-serif
-    font-weight: 300
+    font-weight: 400
+    a
+        color: #586e75
     text-transform: none
-    color: #2aa198
     line-height: 1em
+    font-size: 2em
+    letter-spacing: -.07em
     
-header .title
-    font-size: 2.8em
+    @media only screen and (min-width: 480px)
+        font-size: 2.5em
     @media only screen and (min-width: 768px)
-        font-size: 3em
+        font-size: 4em
     @media only screen and (min-width: 1140px)
-        font-size: 3.5em
+        font-size: 4.5em
 
-header h4.subtitle
+.subtitle
     font-family: 'Oswald', sans-serif
-    font-size: .7em //64px
-    @media only screen and (min-width: 768px)
-        font-size: .9em
+    text-transform: uppercase
     font-style: italic
-    font-weight: 300
-    color: #002b36
+    color: #cb4b16
+    font-size: 1em
+    font-weight: 400
+    @media only screen and (min-width: 480px)
+        font-size: 1.2em
+    @media only screen and (min-width: 768px)
+        font-size: 1.5em
+    @media only screen and (min-width: 1140px)
+        font-size: 2em
+
+.footer-container footer .title
+    font-size: 1.5em
 
 /*** End Logo/Title ***/
 
@@ -107,11 +117,19 @@ header h4.subtitle
     z-index: 100
 
     header 
-        .title 
-            line-height: 1em
-            margin: 17px 0 -3px 0
-        .subtitle
-            margin: 1em 0 -.3em .3em
+        position: relative
+        .logo-box
+            position: absolute
+            height: 100%
+            width: 20em
+            .title , .subtitle
+                position: absolute
+                margin: 0
+            .title
+                bottom: -3px
+            .subtitle
+                top: .6em
+                left: 5em
 
 footer .title
     float:none
