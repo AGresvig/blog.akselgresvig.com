@@ -13,6 +13,7 @@
 * <del>Find fonts - header and body text, and apply</del>
 * <del>Find background - plain white-ish texture, and apply</del>
 * <del>Remove default theming/coloring</del>
+* <del>header/logo design</del>
 
 ##Content sectioning
 * <del>Logo/top section</del>
