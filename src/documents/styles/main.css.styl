@@ -46,7 +46,6 @@ a
 .footer-container footer
     h1, h2, h3, h4, h5, h6
         color: #fff
-        text-transform: uppercase
     p, span
         color: #999
 
@@ -108,10 +107,8 @@ p + p
     General: Theme & layout
    =================== */
 .header-container
-    //background-color: #fdf6e3
     background-image: url('/images/styling/debut_light@2X.png')
     box-shadow: 0px 1px 4px rgba(0,0,0,.2)
-    //text-align: center
     border-top: 2px solid #2aa198
     border-bottom: 1px solid #2aa198
     z-index: 100
@@ -130,16 +127,16 @@ p + p
                 @media only screen and (min-width: 1140px)
                     bottom: -3px
             .subtitle
-                top: .25em
+                bottom: 1.7em
                 left: 5.6em
                 @media only screen and (min-width: 480px)
-                    top: 0.1em;
+                    bottom: 1.8em;
                     left: 6.2em;
                 @media only screen and (min-width: 768px)
-                    top: 0.58em;
+                    bottom: 1.85em;
                     left: 5.3em;
                 @media only screen and (min-width: 1140px)
-                    top: 0.3em;
+                    bottom: 1.92em;
                     left: 5.6em;
 
 footer .title
@@ -197,14 +194,26 @@ footer.wrapper
 /* ===================
     Navigation
    =================== */
-header nav 
-    li.active a, a:hover, a:active
-        color: #999
-
-    a, a:visited
-        color: #999
-        font-size: 1.2em
-        text-transform: uppercase
+header
+    nav.nav-collapse 
+        li a, li a:visited
+            color: #999
+            font-size: 1.2em
+            text-transform: uppercase
+        li.active a, a:hover, a:active
+            color: #cb4b16
+            text-decoration: underline
+    
+    nav.nav-collapse.closed
+        a
+            background: none
+    nav.nav-collapse.opened
+        a
+            background: #002b36;
+            margin: 0 0 10px 0
+            padding: 15px 0;
+            float: none
+            width: 100%
 
 /* ============= End Navigation ================*/
 
