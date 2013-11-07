@@ -3,16 +3,13 @@ title: Hello World!
 layout: post
 date: 2013-07-07
 tags: ['hello', 'world', 'post']
-summary: "This is a hello world post. It is mandatory on any developers blog, is it not?"
+summary: "We're live! After about a decade of procrastination."
+image: "helloworld.png"
 ---
 
-## This is my first blogpost!
-The sun is shining today. 
+# This is my first blogpost!
+I've been meaning to get something like this online for years, but work and my dozen other spare-time engagements have taken priority.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.
+Anyways we're finally online, and I intend to share my thoughts and experiences on all things development-related in this blog.
 
-Allright, not bad! Will a Twitter link work? @AGresvig
-
-
-### Lorem
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.
+## Stay tuned!

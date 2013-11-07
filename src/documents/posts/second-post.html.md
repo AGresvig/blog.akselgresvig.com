@@ -3,7 +3,9 @@ title: My second post
 layout: post
 date: 2013-07-08
 tags: ["another", "post"]
-summary: "A summary of post two. Rather exciting."
+image: 'test.png'
+
+summary: "A summary of post two. Rather exciting. But sometimes you just gotta give more. A lot more. give it what it needs, what it takes. Nah-mean? Yeah yeah give it what it needs, what it takes. Nah-mean? Yeah yeah give it what it needs, what it takes. Nah-mean? Yeah yeah"
 ---
 
 ## And the second blogpost
