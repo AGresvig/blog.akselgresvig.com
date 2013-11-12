@@ -9,34 +9,33 @@ header
   //p I write about development and all kinds of tech stuff that I get my hands on. Keep in touch!
 
 //- List out formatted <section> tags for each existing post
-each post, index in getCollection("posts").toJSON()
+each post, index in getCollection("posts").toJSON().slice(0,4)
   //- Latest post is displayed in full
   - var latestPost = index == 0 
-  section.post-item
-    div(class=latestPost ? 'latest' : 'previous')
-    
-      h1.post-title
-        a(href=post.url)= post.title
-      .post-metadata  
-        span Posted on 
-          != post.date.toDateString()
-        .tags
-          span in
-          ul
-            //- List tags with links in a comma separated list (no comma after last tag)
-            each tag, index in post.tags
-              li
-                a(href='tags/'+tag)= tag
-                if(index < post.tags.length-1)
-                  ,
-    
-      .post-body
-        .post-image
-          img(src='images/posts/'+post.image, alt='Post image')
-        if latestPost
-          article.post-content!= post.contentRenderedWithoutLayouts
-        else
-          p.post-content= post.summary
+  div(class=latestPost ? 'latest' : 'previous').post-item
+    h1.post-title
+      a(href=post.url)= post.title
+    .post-metadata  
+      span Posted on 
+        != post.date.toDateString()
+      .tags
+        span in
+        ul
+          //- List tags with links in a comma separated list (no comma after last tag)
+          each tag, index in post.tags
+            li
+              a(href='tags/'+tag)= tag
+              if(index < post.tags.length-1)
+                ,
+  
+    .post-body
+      .post-image
+        img(src='images/posts/'+post.image, alt='Post image')
+      if latestPost
+        article.post-content!= post.contentRenderedWithoutLayouts
+        h2.earlier-posts Earlier posts:
+      else
+        p.post-content= post.summary
     hr.divider
 
 footer
