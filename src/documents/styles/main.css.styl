@@ -16,6 +16,7 @@ $cyan = #2aa198
 //Fonts
 $bodyText = #444
 $headerText = #222
+$lightGrey = #999
 
 
 /* ===================
@@ -62,7 +63,7 @@ a
     h1, h2, h3, h4, h5, h6
         color: #fff
     p, span
-        color: #999
+        color: $lightGrey
 
 //Make abbreviations stand out less
 abbr
@@ -100,7 +101,7 @@ p + p
     font-family: 'Oswald', sans-serif
     text-transform: uppercase
     font-style: italic
-    color: #cb4b16
+    color: $orange
     font-size: 1em
     font-weight: 400
     @media only screen and (min-width: 480px)
@@ -114,6 +115,14 @@ p + p
     font-size: 1.5em
 
 /*** End Logo/Title ***/
+
+/*** Blogpost fonts **/
+.blogpost
+    .post-title
+        font-weight: 400
+        font-size: 2.5em
+        color: $base01
+/*** End Blogpost fonts **/
 
 /* ============= End Fonts ================*/
 
@@ -191,9 +200,26 @@ footer.wrapper
 
 
 /* ===================
-    Index page
+    Index page & blogpost page
    =================== */
-.post-item
+.post-metadata 
+    width: 65%
+    line-height: 1.2em
+    text-transform: lowercase
+    color: $lightGrey
+    font-size: .9em
+    margin: .5em 0
+    *
+        margin: 0 .1em
+        display: inline-block 
+    ul
+        margin: 0
+        padding: 0
+    span
+        margin-left: 0
+
+.post-item,
+.blogpost
     margin: 2em 0 4em 0
     position: relative
 
@@ -204,34 +230,19 @@ footer.wrapper
         margin-top: 0
         display: block
 
-    .post-metadata 
-        width: 65%
-        line-height: 1.2em
-        text-transform: lowercase
-        color: #999
-        font-size: .9em
-        margin: .5em 0
-        *
-            margin: 0 .1em
-            display: inline-block 
-        ul
-            margin: 0
-            padding: 0
-        span
-            margin-left: 0
-
     .divider 
         clear: both
 
     .earlier-posts
         margin-bottom: .4em
-        color: #ccc
+        color: #999
     
-.latest.post-item
+article.content .latest.post-item,
+article.content .blogpost
     .post-image
         margin: 2em 2%        
     .post-content 
-        margin: 2em 2% 5em 2%       
+        margin: 3em 2% 5em 2%       
     .post-image img
         width: 100%
     .post-body, .post-content 
@@ -266,20 +277,20 @@ footer.wrapper
             margin-bottom: 1em
 
         
-/* ============= End Index Page ================*/
+/* ============= End Index & blogpost page ==============*/
 
 
 /* ===================
-    Navigation
+    Navigation 
    =================== */
 header
     nav.nav-collapse 
         li a, li a:visited
-            color: #999
+            color: $lightGrey
             font-size: 1.2em
             text-transform: uppercase
         li.active a, a:hover, a:active
-            color: #cb4b16
+            color: $orange
             text-decoration: underline
     
     nav.nav-collapse.closed
