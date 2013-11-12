@@ -7,14 +7,14 @@
     "npm": "1.2"
   },
   "dependencies": {
-    "docpad": "~6.53.4",
+    "docpad": "~6.54.5",
     "docpad-plugin-eco": "~2.0.2",
     "docpad-plugin-livereload": "~2.5.3",
     "docpad-plugin-robotskirt": "~2.0.3",
     "highlight.js": "~7.3.0",
     "docpad-plugin-stylus": "~2.5.0",
-    "docpad-plugin-coffeescript": "~2.2.2",
-    "docpad-plugin-jade": "~2.6.0"
+    "docpad-plugin-coffeescript": "~2.2.3",
+    "docpad-plugin-jade": "~2.6.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
