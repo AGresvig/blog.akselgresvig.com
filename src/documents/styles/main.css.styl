@@ -187,7 +187,7 @@ p + p
     background-image: url('/images/styling/debut_light.png')
     z-index: 1
     
-    .main .content
+    .main article
         @media only screen and (min-width: 768px)
             width: 69%
         @media only screen and (min-width: 1168px)
@@ -215,6 +215,7 @@ footer.wrapper
 
 .footer-container
     border-top: 3px solid $cyan
+/** End footer **/
 
 /* ============= End Theme & Layout ================*/
 
@@ -273,6 +274,8 @@ footer.wrapper
         width: initial
     .divider
         margin-top: 0
+    .post-summary
+        margin: 0
     
 .previous.post-item 
     @media only screen and (min-width: 768px)
@@ -302,6 +305,14 @@ footer.wrapper
         
 /* ============= End Index & blogpost page ==============*/
 
+/* ===================
+    Comments
+   =================== */
+.content footer.comments 
+    float: left
+
+
+/* ============= End Comments ==============*/
 
 /* ===================
     Navigation 
