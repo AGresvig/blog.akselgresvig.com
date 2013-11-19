@@ -3,15 +3,19 @@
 //Extra power! http://visionmedia.github.io/nib/
 @import 'nib'
 
-/*** Variables ***/
+/* ===================
+    VARIABLES
+    =================== */
 
 // "Solarized" color palette
 $base01 = #586e75
 $base02 = #073642
 $base03 = #002b36
 $base00 = #657b83
+$base2 = #eee8d5
 $orange = #cb4b16
 $cyan = #2aa198
+
 
 //Fonts
 $bodyText = #444
@@ -20,7 +24,7 @@ $lightGrey = #999
 
 
 /* ===================
-    SITEWIDE FONTS
+    GLOBAL FONTS
     =================== */
 
 /*
@@ -52,6 +56,14 @@ h1, h2, h3, h4, h5, h6
 a
     color: #2aa198
     text-decoration: none
+
+.subtle-text
+    text-transform: lowercase
+    color: $lightGrey
+    font-size: .9em
+
+.bolded
+    font-weight: bold
 
 .main footer,
 .main aside
@@ -117,11 +129,19 @@ p + p
 /*** End Logo/Title ***/
 
 /*** Blogpost fonts **/
+.post-summary
+    font-style: italic
+
+.post-metadata.bolded li
+    text-transform: uppercase
+
+.latest.post-item,
 .blogpost
     .post-title
         font-weight: 400
         font-size: 2.5em
         color: $base01
+        line-height: 1em
 /*** End Blogpost fonts **/
 
 /* ============= End Fonts ================*/
@@ -203,11 +223,7 @@ footer.wrapper
     Index page & blogpost page
    =================== */
 .post-metadata 
-    width: 65%
     line-height: 1.2em
-    text-transform: lowercase
-    color: $lightGrey
-    font-size: .9em
     margin: .5em 0
     *
         margin: 0 .1em
@@ -217,19 +233,26 @@ footer.wrapper
         padding: 0
     span
         margin-left: 0
+    li a
+        padding: 3px
+        background-color: $base2
+    li a:hover
+        background-color: $base02
+    
+.post-item .post-metadata 
+    width: 65%
 
 .post-item,
 .blogpost
-    margin: 2em 0 4em 0
+    margin-bottom: 4em
     position: relative
 
     .post-title
         margin-bottom: .1em
-        line-height: 1em
+    
     .post-body 
         margin-top: 0
         display: block
-
     .divider 
         clear: both
 
@@ -237,8 +260,8 @@ footer.wrapper
         margin-bottom: .4em
         color: #999
     
-article.content .latest.post-item,
-article.content .blogpost
+.content .latest.post-item,
+.content .blogpost
     .post-image
         margin: 2em 2%        
     .post-content 
