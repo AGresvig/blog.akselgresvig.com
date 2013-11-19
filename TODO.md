@@ -14,6 +14,7 @@
 * <del>Find background - plain white-ish texture, and apply</del>
 * <del>Remove default theming/coloring</del>
 * <del>header/logo design</del>
+* Styling of blockquotes
 
 ##Content sectioning
 * <del>Logo/top section</del>
@@ -22,7 +23,7 @@
 * post page layout
 
 ##Site config must-haves
-* Needs to show a limited number of posts on index page
+* <del>Needs to show a limited number of posts on index page</del>
 * Need "related" posts on post page
 * Show posts by tag-page
 * Need "tags" support with links on pages
@@ -45,7 +46,8 @@
 * SVG header/logo
 * Improved styling
 * TypePlate & SASS
-* Make skeleton Eco template and everything inside <body> in a Jade template
+* <del>Make skeleton Eco template and everything inside <body> in a Jade template</del>
+*  Rolling links reveal-style
 
 ##Future
 * In-depth bio page?
