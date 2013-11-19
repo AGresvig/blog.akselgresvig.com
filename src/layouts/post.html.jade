@@ -18,14 +18,15 @@ article.blogpost
   //If there are other posts with same tag, list them
   - var relatedPosts = getCollection("posts").findAll({tags: {$in: post.tags}, title: {$ne: post.title}}).toJSON()
   if relatedPosts.length
-    footer
-      h3 Related posts
+    footer.related
+      .icon.icon-tree
+        h3 Related posts
       ul
-      each relatedPost in relatedPosts
-        li
-          a(href=relatedPost.url)= relatedPost.title 
-          |  on 
-          != relatedPost.date.toDateString()
+        each relatedPost in relatedPosts
+          li
+            a(href=relatedPost.url)= relatedPost.title 
+            |  on 
+            != relatedPost.date.toDateString()
     
 include ../includes/about_aside
 

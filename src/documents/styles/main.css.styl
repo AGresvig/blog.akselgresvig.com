@@ -150,6 +150,16 @@ p + p
 /* ===================
     General: Theme & layout
    =================== */
+
+/*** some general icon styling ***/
+.icon
+    font-size: initial
+    vertical-align: middle
+    *
+        display: inline-block
+    :first-child 
+        margin-left: .7em
+
 .header-container
     background-image: url('/images/styling/debut_light@2X.png')
     box-shadow: 0px 1px 4px rgba(0,0,0,.2)
@@ -232,8 +242,8 @@ footer.wrapper
     ul
         margin: 0
         padding: 0
-    span
-        margin-left: 0
+    .tags
+        margin-left: 1em
     li a
         padding: 3px
         background-color: $base2
@@ -260,6 +270,9 @@ footer.wrapper
     .earlier-posts
         margin-bottom: .4em
         color: #999
+    footer.related
+        ul
+            margin: 0
     
 .content .latest.post-item,
 .content .blogpost
