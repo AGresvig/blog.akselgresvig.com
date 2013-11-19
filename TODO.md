@@ -15,6 +15,7 @@
 * <del>Remove default theming/coloring</del>
 * <del>header/logo design</del>
 * Styling of blockquotes
+* Style lists w icons etc (related posts, older posts)
 
 ##Content sectioning
 * <del>Logo/top section</del>
@@ -24,9 +25,8 @@
 
 ##Site config must-haves
 * <del>Needs to show a limited number of posts on index page</del>
-* Need "related" posts on post page
-* Show posts by tag-page
-* Need "tags" support with links on pages
+* <del>Need "related" posts on post page</del>
+* Show posts by tag-page/Need "tags" support with links on pages
 * <del>Twitter @username-tags should be picked up by Robotskirt</del>
 
 ##Content must-haves
