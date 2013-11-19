@@ -1,4 +1,11 @@
 aside
-  h3 Aside
-  p.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante.
+  .about
+    h3 Aside
+    p.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante.
+  
+  .tags-heatmap
+    h3 TAGS
+    ul
+      each taginfo in getTagCloud()
+        li: a(href=taginfo.url, data-tag-count=taginfo.count, data-tag-weight=taginfo.weight)= taginfo.tag

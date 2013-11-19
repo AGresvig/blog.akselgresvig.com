@@ -6,6 +6,6 @@ span Posted on
     //- List tags with links in a comma separated list (no comma after last tag)
     each tag, index in post.tags
       li
-        a(href='tags/'+tag)= tag
+        a(href=getTagUrl(tag))= tag
         if(index < post.tags.length-1)
           ,
