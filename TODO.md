@@ -1,4 +1,4 @@
-#PoA for blo.akselgresvig.com
+#PoA for blog.akselgresvig.com
 
 ##Status 28/9
 * Site layout & markup structure in place - responsive
@@ -9,24 +9,24 @@
 * Live-reload in place
 
 #TODOs
-##1. Site design
+##Site design
 * <del>Find fonts - header and body text, and apply</del>
 * <del>Find background - plain white-ish texture, and apply</del>
 * <del>Remove default theming/coloring</del>
 * <del>header/logo design</del>
 * Styling of blockquotes
-* Style lists w icons etc (related posts, older posts)
+* <del>Style lists w icons etc (related posts, older posts)</del>
 
 ##Content sectioning
 * <del>Logo/top section</del>
 * <del>Footer</del> 
-* index page layout
-* post page layout
+* <del>index page layout</del>
+* <del>post page layout</del>
 
 ##Site config must-haves
 * <del>Needs to show a limited number of posts on index page</del>
 * <del>Need "related" posts on post page</del>
-* Show posts by tag-page/Need "tags" support with links on pages
+* <del>Show posts by tag-page/Need "tags" support with links on pages</del>
 * <del>Twitter @username-tags should be picked up by Robotskirt</del>
 
 ##Content must-haves
@@ -35,19 +35,19 @@
 * Favico
 
 ##External service must-haves
-* "Share" functionality
-* Disqus comments
+* "Share" functionality - AddThis plugin?
+* Disqus comments - Services plugin? Or native comments?
 
 ##^MVP^
 
 ---
 
 ##Other/nice-to-have
-* SVG header/logo
-* Improved styling
+* RSS feed - rss plugin?
+* Clean URLs - plugin
 * TypePlate & SASS
 * <del>Make skeleton Eco template and everything inside <body> in a Jade template</del>
-*  Rolling links reveal-style
+* Rolling links reveal-style
 
 ##Future
 * In-depth bio page?
