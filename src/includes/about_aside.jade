@@ -15,8 +15,10 @@ aside.about
       li: a(target="_blank", href="https://plus.google.com/u/0/+AkselGresvig?rel=author", class="icon icon-google-plus3", title="Google Plus profile")
       li: a(target="_blank", href="http://no.linkedin.com/in/akselgresvig", class="icon icon-linkedin", title="LinkedIn profile") 
 
-  section.tags-heatmap
-    h3 TAGS
-    ul
-      each taginfo in getTagCloud()
-        li: a(href=taginfo.url, data-tag-count=taginfo.count, data-tag-weight=taginfo.weight)= taginfo.tag
+  //- Dont feel like we need this (yet)
+  //-
+    section.tags-heatmap
+      h3 TAGS
+      ul
+        each taginfo in getTagCloud()
+          li: a(href=taginfo.url, data-tag-count=taginfo.count, data-tag-weight=taginfo.weight)= taginfo.tag
