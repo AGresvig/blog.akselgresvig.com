@@ -35,7 +35,7 @@
 * Favico
 
 ##External service must-haves
-* "Share" functionality - AddThis plugin?
+* <del>"Share" functionality - AddThis plugin?</del>
 * Disqus comments - Services plugin? Or native comments?
 
 ##^MVP^
