@@ -20,7 +20,11 @@ article.mainpage
           img(src='/images/posts/'+post.image, alt='Post image')
         if latestPost
           //- Latest post is displayed in full
-          article.post-content!= post.contentRenderedWithoutLayouts
+          article.post-content
+            != post.contentRenderedWithoutLayouts
+            h4.italic
+              a(href=post.url) See post
+              |  to view comments and related content
           h2.earlier-posts Earlier posts:
         else
           p.post-content= post.summary
