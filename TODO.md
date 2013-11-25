@@ -30,8 +30,8 @@
 * <del>Twitter @username-tags should be picked up by Robotskirt</del>
 
 ##Content must-haves
-* Quick bio with picture
-* LinkedIn, Github, Twitter icons w/ links
+* <del>Quick bio with picture</del>
+* <del>LinkedIn, Github, Twitter icons w/ links</del>
 * Favico
 
 ##External service must-haves
