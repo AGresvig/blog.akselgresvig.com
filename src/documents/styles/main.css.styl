@@ -334,8 +334,6 @@ footer.wrapper
         width: 176px
         border-radius: 88px;
         box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
         margin: 0 auto;
         display: block;
     
@@ -347,6 +345,16 @@ footer.wrapper
                 font-size: 2em
                 padding-right: .3em
     
+//An attempt to override styles on the AddThis widget, its a little too attention-grabbing
+.akselgresvig 
+    #at4-share
+        opacity: 0.4
+
+        .at4-share-btn 
+            background: rgb(232, 232, 232) !important
+
+    #at4-share:hover
+        opacity: 1
         
 
 /* ============= End Comments ==============*/
