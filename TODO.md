@@ -36,7 +36,7 @@
 
 ##External service must-haves
 * <del>"Share" functionality - AddThis plugin?</del>
-* Disqus comments - Services plugin? Or native comments?
+* <del>Disqus comments - Services plugin? Or native comments?</del>
 
 ##^MVP^
 
@@ -48,6 +48,8 @@
 * TypePlate & SASS
 * <del>Make skeleton Eco template and everything inside <body> in a Jade template</del>
 * Rolling links reveal-style
+* OO-ify JS script code so we dont get jQuery spaghetti
+* Use moar CoffeeScript!
 
 ##Future
 * In-depth bio page?
