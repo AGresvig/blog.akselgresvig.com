@@ -1,10 +1,21 @@
-aside
-  .about
-    h3 Aside
-    p.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante.
+aside.about
   
-  .tags-heatmap
+  section.profile-pic
+    img(src='/images/aksel_gresvig.jpg', alt="Aksel Gresvig")
+  
+  section.bio
+    p I have a serious addiction to technology, and I work with development at Accenture Norway where I take on roles such as frontend developer & architect, frontend evangelist, entrapeneur to name a few.
+    p I am a generalist with too many hobbies. I love to live, I live to learn, and I'm currently doing so in Oslo, Norway.
+  
+  section.social-links    
+    h3 Connect with me
+    ul
+      li: a(target="_blank", href="https://twitter.com/agresvig", class="icon icon-twitter2", title="Twitter profile")
+      li: a(target="_blank", href="https://github.com/AGresvig", class="icon icon-github5", title="GitHub profile")
+      li: a(target="_blank", href="https://plus.google.com/u/0/+AkselGresvig?rel=author", class="icon icon-google-plus3", title="Google Plus profile")
+      li: a(target="_blank", href="http://no.linkedin.com/in/akselgresvig", class="icon icon-linkedin", title="LinkedIn profile") 
+
+  section.tags-heatmap
     h3 TAGS
     ul
       each taginfo in getTagCloud()
