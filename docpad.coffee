@@ -17,7 +17,7 @@ docpadConfig = {
             ]
 
             # The default title of our website
-            title: "akselgresvig.com"
+            title: "blog.akselgresvig.com"
 
             # The website description (for SEO)
             description: """
@@ -53,7 +53,10 @@ docpadConfig = {
                 "/vendor/jquery-1.10.1.min.js",
                 "/vendor/modernizr-2.6.2-respond-1.1.0.min.js",
                 "/vendor/responsive-nav.js",
-                "/scripts/main.js"
+                "/scripts/main.js",
+                "/scripts/disqus.js",
+                "/scripts/addthis.js",
+                "/scripts/ga.js"
             ]
 
         getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title
