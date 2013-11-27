@@ -33,6 +33,9 @@
 * <del>Quick bio with picture</del>
 * <del>LinkedIn, Github, Twitter icons w/ links</del>
 * Favico
+* <del>404 page</del>
+* Robots.txt
+* Humans.txt
 
 ##External service must-haves
 * <del>"Share" functionality - AddThis plugin?</del>
