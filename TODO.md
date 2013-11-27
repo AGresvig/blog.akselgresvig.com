@@ -32,7 +32,7 @@
 ##Content must-haves
 * <del>Quick bio with picture</del>
 * <del>LinkedIn, Github, Twitter icons w/ links</del>
-* Favico
+* <del>Favico</del>
 * <del>404 page</del>
 * Robots.txt
 * Humans.txt
