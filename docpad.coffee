@@ -40,7 +40,6 @@ docpadConfig = {
 
             # Styles
             styles: [
-                "/styles/vendor/initializr.css",
                 "/styles/vendor/normalize.css",
                 "/styles/vendor/highlightjs/solarized_light.css",
                 "/styles/responsive-nav.css",
