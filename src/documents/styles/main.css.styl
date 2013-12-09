@@ -25,7 +25,7 @@ $cyan = #2aa198
 //Fonts
 $bodyText = #444
 $headerText = #222
-$lightGrey = #999
+$lightGrey = #888
 
 /* ===================
     IMPORTS
@@ -261,12 +261,16 @@ footer.wrapper
         display: block;
     
     .social-links
-        li
-            display: inline-block
-            .icon
-                color: $bodyText
-                font-size: 2em
-                padding-right: .3em
+        ul
+            padding: 0
+            li
+                display: inline-block
+                .icon
+                    color: $lightGrey
+                    font-size: 2em
+                    padding-right: .3em
+                .icon:hover
+                    color: $bodyText
     
 //An attempt to override styles on the AddThis widget, its a little too attention-grabbing
 .akselgresvig 
