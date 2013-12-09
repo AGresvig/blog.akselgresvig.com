@@ -14,7 +14,7 @@
 * <del>Find background - plain white-ish texture, and apply</del>
 * <del>Remove default theming/coloring</del>
 * <del>header/logo design</del>
-* Styling of blockquotes
+* <del>Styling of blockquotes</del>
 * <del>Style lists w icons etc (related posts, older posts)</del>
 
 ##Content sectioning
@@ -34,8 +34,6 @@
 * <del>LinkedIn, Github, Twitter icons w/ links</del>
 * <del>Favico</del>
 * <del>404 page</del>
-* Robots.txt
-* Humans.txt
 
 ##External service must-haves
 * <del>"Share" functionality - AddThis plugin?</del>
@@ -53,6 +51,8 @@
 * Rolling links reveal-style
 * OO-ify JS script code so we dont get jQuery spaghetti
 * Use moar CoffeeScript!
+* Robots.txt
+* Humans.txt
 
 ##Future
 * In-depth bio page?
