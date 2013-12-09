@@ -186,6 +186,13 @@ p + p
     z-index: 100
 
     header 
+        min-height:4em
+        @media only screen and (min-width: 480px)
+            min-height: 4.5em
+        @media only screen and (min-width: 770px)
+            min-height: 5em
+        @media only screen and (min-width: 1140px)
+            min-height: 5.5em
         position: relative
         .logo-box
             position: absolute
