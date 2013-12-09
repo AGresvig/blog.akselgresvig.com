@@ -5,7 +5,12 @@
 <!--[if IE 7]>         
     <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         
-    <html class="no-js lt-ie9"> <![endif]-->
+    <html class="no-js lt-ie9"> 
+        <div id="i8-warning">
+            <h1>You are using an outdated browser</h1>
+            <p>I'm sorry but I don't have time to deal with Internet Explorer's bugs and inconsistensies. Please <a href="http://browsehappy.com/">upgrade to a modern browser</a> if you wish to enjoy my blog.</p>
+        </div>
+        <![endif]-->
 <!--[if gt IE 8]><!--> 
 <html class="no-js"> <!--<![endif]-->
     <head>
