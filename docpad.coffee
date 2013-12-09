@@ -17,11 +17,11 @@ docpadConfig = {
             ]
 
             # The default title of our website
-            title: "blog.akselgresvig.com"
+            title: "Aksel Gresvig's Techblog"
 
             # The website description (for SEO)
             description: """
-                The personal blog of developer Aksel Gresvig. A technical oriented blog on web technologies.
+                The personal blog of developer Aksel Gresvig. A technical oriented blog on frontend and web technologies.
                 """
 
             # The website keywords (for SEO) separated by commas
