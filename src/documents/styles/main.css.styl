@@ -42,18 +42,20 @@ $lightGrey = #888
    =================== */
 
 /*** some general icon styling ***/
+.iconwrapper *
+    vertical-align: middle
+    display: inline-block
+
 .icon
     font-size: initial
     vertical-align: middle
-    *
-        display: inline-block
-    :first-child 
-        margin-left: .7em
+    padding: 0 0.2em 0.1em 0;
+    + * //This selects the item directly following the icon
+        padding-right: .4em
 
 .icon-lg
     font-size: 1em
-    vertical-align: initial
-    padding: .2em
+    padding: .4em
 
 .header-container
     background-image: url('/images/styling/debut_light@2X.png')
@@ -83,10 +85,10 @@ $lightGrey = #888
                 @media only screen and (min-width: 1140px)
                     bottom: -3px
             .subtitle
-                bottom: 1.7em
+                bottom: 1.91em
                 left: 5.6em
                 @media only screen and (min-width: 480px)
-                    bottom: 1.8em;
+                    bottom: 2.1em;
                     left: 6.2em;
                 @media only screen and (min-width: 770px)
                     bottom: 1.85em;
@@ -166,8 +168,6 @@ footer.wrapper
     ul
         margin: 0
         padding: 0
-    .tags
-        margin-left: 1em
     li a
         padding: 3px
         background-color: $base2
@@ -179,7 +179,7 @@ footer.wrapper
         //but I dont want to show it - there is only one author on this page..
         display: none
 
-.post-item .post-metadata 
+.previous.post-item .post-metadata 
     width: 65%
 
 .post-item,
@@ -200,6 +200,8 @@ footer.wrapper
         margin-bottom: .4em
         color: #999
     footer.related
+        h3
+            color: $headerText
         ul
             margin: 0
     
@@ -227,6 +229,7 @@ footer.wrapper
     .post-body 
         min-height: 5em;      
         .post-image
+            opacity: .6
             float: right 
             width: 30%
             height: 100%

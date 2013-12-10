@@ -22,7 +22,8 @@ article.blogpost
   - var relatedPosts = getCollection("posts").findAll({tags: {$in: post.tags}, title: {$ne: post.title}}).toJSON()
   if relatedPosts.length
     footer.related
-      .icon.icon-tree
+      .iconwrapper
+        .icon-lg.icon-tree
         h3 Related posts
       ul
         each relatedPost in relatedPosts
