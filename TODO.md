@@ -42,6 +42,18 @@
 ##^MVP^
 
 ---
+# Status 10/12/13
+* MVPs completed
+
+## TODOs
+### Deploy
+* Push to Github (currently only on Bitbucket)
+* Deploy to Github Pages
+* Deploy to Heroku for fun?
+* Set up Travis CI build which automatically deploys to gh-pages
+* Set up blog.akselgresvig.com domain
+
+---
 
 ##Other/nice-to-have
 * RSS feed - rss plugin?
