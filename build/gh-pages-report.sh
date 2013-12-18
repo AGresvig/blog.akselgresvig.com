@@ -4,8 +4,13 @@ echo -e "Current Repo:$REPO --- Travis Branch:$TRAVIS_BRANCH"
 TEST_PAGE="http://agresvig.github.io/blog.akselgresvig.com/"
 LATEST_SHA=$(git rev-parse HEAD)
 
+echo "STATUS"
+git status
+git remote -a
+
 if [ "$TRAVIS_BRANCH" == "master" ]; then
-git checkout gh-pages
+    git fetch origin gh-pages
+    git checkout gh-pages
     ps -eo pcpu,pid,user,args
     sleep 1m
     phantomjs loadreport.js ${TEST_PAGE} performance json $LATEST_SHA
