@@ -10,7 +10,6 @@
 $smartphone = 480px
 $tablet = 770px
 $desktop = 1140px
-$widescreen = 1168px
 
 // "Solarized" color palette
 $base01 = #586e75
@@ -102,17 +101,15 @@ $lightGrey = #888
     z-index: 1
     
     .main article
-        @media only screen and (min-width: 770px)
-            width: 69%
-        @media only screen and (min-width: 1168px)
-            width: 60%
+        //Dont want sentences longer than max 90 chars
+        max-width: 650px 
 
     .main aside
         @media only screen and (min-width: 770px)
             width: 28%
             padding: 0 0 10px 0
             margin-top: 5em;
-        @media only screen and (min-width: 1168px)
+        @media only screen and (min-width: 1140px)
             width: 30%
         
 /** General containers **/
