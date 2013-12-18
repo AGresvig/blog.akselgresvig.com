@@ -1,19 +1,13 @@
-before_install:
-  - gem install bundler
-language: ruby
-rvm:
-  - 2.0.0
+language: node_js
 before_script:
-  - "rake"
-  - bash build/post_build.sh
-
+- ./build/pre_build.sh
 env:
   global:
-    secure: lJ+y3RybTKzqHuoOrRMiOOdNY6+3IJHoE0lFK4omtq2uSvx8pV/kjyRYAzdPIvfekxJ1LjBYKN2FMVA1bvv7v9/7427LuiUECmQkBSQNhyB7WCJh9NiHGSVNZgOFrzaE36NElmXHt5rg8hC5kIWS404hMhhzU60mDHZhr16dgQk=
-
+  - secure: b9P9JeciY61ygtamzJF8IJAWYNjthfdWq+cou/omYnqd1qGGhliD3C1mUFjp4kD4vp0ntP9ohMjTAK4oprSTENlzQ3JyE4cVQBmlQNUUg6WeYlv9wkneXKggNgZ8zrBghxVbw+W7JzCMlJ6nyiSLqdAt+p9T4VlXu7Nj+jQ6bWE=
+  - FOO="BAR"
+  - GH_REPO="AGresvig/blog.akselgresvig.com"
 branches:
   except:
-    - gh-pages
-
+  - gh-pages
 script:
-  - bash build/gh-pages-report.sh
+- docpad deploy-ghpages
