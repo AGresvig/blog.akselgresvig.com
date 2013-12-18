@@ -10,4 +10,4 @@ branches:
   except:
   - gh-pages
 script:
-- docpad deploy-ghpages
+- docpad deploy-ghpages --env static
