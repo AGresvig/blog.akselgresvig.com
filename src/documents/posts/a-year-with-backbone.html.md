@@ -8,6 +8,8 @@ tags:
     - post
 image: 'backbone-js.jpg'
 summary: "I've spent over a year as frontend architect on a fairly large-scale project for a new national health portal. Here are some thoughts and experiences, especially lessons learned regarding after creating a Single Page App with a Java backend."
+
+draft: true
 ---
 
 # Creating a new health portal
