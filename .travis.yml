@@ -11,3 +11,4 @@ branches:
   - gh-pages
 script:
 - docpad deploy-ghpages --env static
+- ./build/gh-pages-report.sh
