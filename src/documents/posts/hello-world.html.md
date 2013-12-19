@@ -2,7 +2,7 @@
 title: Hello World!
 layout: post
 date: 2013-12-18
-tags: ['hello', 'world', 'post']
+tags: ['helloworld']
 summary: "We're live! After about a decade of procrastination."
 image: "helloworld.png"
 ---
