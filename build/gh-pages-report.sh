@@ -7,14 +7,15 @@ LATEST_SHA=$(git rev-parse HEAD)
 echo "STATUS"
 git status
 git branch -a
+ls -al
 
 if [ "$TRAVIS_BRANCH" == "master" ]; then
     git fetch origin gh-pages
     git checkout gh-pages
     ps -eo pcpu,pid,user,args
     sleep 1m
-    phantomjs out/loadreport.js ${TEST_PAGE} performance json $LATEST_SHA
-    phantomjs out/speedreport.js ${TEST_PAGE} $LATEST_SHA
+    phantomjs src/loadreport.js ${TEST_PAGE} performance json $LATEST_SHA
+    phantomjs src/speedreport.js ${TEST_PAGE} $LATEST_SHA
     git add -f reports/.
     git add -f speedreports/.
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
