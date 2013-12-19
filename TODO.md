@@ -47,10 +47,10 @@
 
 ## TODOs
 ### Deploy
-* Push to Github (currently only on Bitbucket)
-* Deploy to Github Pages
-* Deploy to Heroku for fun?
-* Set up Travis CI build which automatically deploys to gh-pages
+* <del>Push to Github (currently only on Bitbucket)</del>
+* <del>Deploy to Github Pages</del>
+* <del>Deploy to Heroku for fun?</del>
+* <del>Set up Travis CI build which automatically deploys to gh-pages</del>
 * Set up blog.akselgresvig.com domain
 
 ---

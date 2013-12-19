@@ -4,9 +4,12 @@ layout: main
 isPage: true
 ---
 article.mainpage  
+  - var numPosts = getCollection("posts").length
+
   //- List out formatted sections for 5 latest posts, where first will be shown in full
   each post, index in getCollection("posts").toJSON().slice(0,4)
     - var latestPost = index == 0 
+
     div(class=latestPost ? 'latest' : 'previous').post-item
       h1.post-title
         a(href=post.url)= post.title
@@ -25,13 +28,13 @@ article.mainpage
             h4.italic
               a(href=post.url) See post
               |  to view comments and related content
-          h2.earlier-posts Earlier posts:
+          if numPosts > 1
+            h2.earlier-posts Earlier posts:
         else
           p.post-content= post.summary
       hr.divider
 
   //if we have more posts, show them in a regular list format 
-  - var numPosts = getCollection("posts").length
   if numPosts > 5 
     footer
       h3 Older posts
