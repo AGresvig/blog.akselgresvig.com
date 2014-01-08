@@ -19,6 +19,8 @@ if [ "$TRAVIS_BRANCH" == "master" ]; then
     phantomjs src/speedreport.js ${TEST_PAGE} $LATEST_SHA
     git add -f reports/.
     git add -f speedreports/.
+    ls -al
+    ls -al src
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
     git push https://${GH_TOKEN}@github.com/${REPO} gh-pages > /dev/null
 fi
