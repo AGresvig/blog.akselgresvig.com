@@ -1,26 +1,26 @@
 export REPO="$(pwd | sed s,^/home/travis/build/,,g)"
-echo -e "*** Current Repo:$REPO --- Travis Branch:$TRAVIS_BRANCH"
+echo -e "*** Current Repo: $REPO --- Travis Branch:$TRAVIS_BRANCH"
  
-TEST_PAGE="http://agresvig.github.io/blog.akselgresvig.com/"
+TEST_PAGE="http://blog.akselgresvig.com/"
 LATEST_SHA=$(git rev-parse HEAD)
 
-echo "*** STATUS"
+echo "*** Git status:"
 git status
+echo "*** Git branches:"
 git branch -a
 
 if [ "$TRAVIS_BRANCH" == "master" ]; then
-    #git fetch origin gh-pages
-    #git checkout gh-pages
-    echo "*** ls -al src"
-    ls -al src
-    ps -eo pcpu,pid,user,args
-    sleep 1m
-    phantomjs src/loadreport.js ${TEST_PAGE} performance json $LATEST_SHA
-    phantomjs src/speedreport.js ${TEST_PAGE} $LATEST_SHA
-    git add -f reports/.
-    git add -f speedreports/.
+    git fetch old master
+    git checkout old/master
+    cd build/loadreport
+    echo "*** Contents of 'build/loadreport':"
     ls -al
-    ls -al src
-    git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
-    git push https://${GH_TOKEN}@github.com/${REPO} gh-pages > /dev/null
+    #sleep 1m
+    phantomjs loadreport.js ${TEST_PAGE} filmstrip $LATEST_SHA
+    phantomjs speedreport.js ${TEST_PAGE} $LATEST_SHA
+    git add -f reports/.
+    echo "*** Contents of 'build/loadreport/reports':"
+    ls -al reports
+    git commit -m "Travis build $TRAVIS_BUILD_NUMBER" # pushed to gh-pages"
+    git push https://${GH_TOKEN}@github.com/${REPO} master > /dev/null #gh-pages > /dev/null
 fi
