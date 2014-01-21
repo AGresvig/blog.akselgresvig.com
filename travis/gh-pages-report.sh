@@ -12,14 +12,14 @@ git branch -a
 if [ "$TRAVIS_BRANCH" == "master" ]; then
     git fetch old master
     git checkout old/master
-    cd build/loadreport
-    echo "*** Contents of 'build/loadreport':"
+    cd travis/loadreport
+    echo "*** Contents of 'travis/loadreport':"
     ls -al
     #sleep 1m
     phantomjs loadreport.js ${TEST_PAGE} filmstrip $LATEST_SHA
     phantomjs speedreport.js ${TEST_PAGE} $LATEST_SHA
     git add -f reports/.
-    echo "*** Contents of 'build/loadreport/reports':"
+    echo "*** Contents of 'travis/loadreport/reports':"
     ls -al reports
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER" # pushed to gh-pages"
     git push https://${GH_TOKEN}@github.com/${REPO} master > /dev/null #gh-pages > /dev/null
