@@ -1,6 +1,6 @@
 language: node_js
 before_script:
-- ./build/pre_build.sh
+- ./travis/pre_build.sh
 env:
   global:
   - secure: b9P9JeciY61ygtamzJF8IJAWYNjthfdWq+cou/omYnqd1qGGhliD3C1mUFjp4kD4vp0ntP9ohMjTAK4oprSTENlzQ3JyE4cVQBmlQNUUg6WeYlv9wkneXKggNgZ8zrBghxVbw+W7JzCMlJ6nyiSLqdAt+p9T4VlXu7Nj+jQ6bWE=
@@ -11,4 +11,4 @@ branches:
   - gh-pages
 script:
 - docpad deploy-ghpages --env static
-- ./build/gh-pages-report.sh
+- ./travis/gh-pages-report.sh
