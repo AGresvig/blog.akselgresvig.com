@@ -66,30 +66,25 @@ function printToFile(data) {
     if(!phantom.args[1]){
         fileid = phantom.args[0].replace('http://','').replace('https://','').replace(/\//g,'');
         fileid = fileid.split('?')[0];
-        myjson = 'speedreports/' + fileid + '.js';
-        myfile = 'speedreports/' + fileid + '.' + extension;
     }else{
         fileid = phantom.args[1];
         myjson = fileid;
-        myfile = null;
     }
+    myjson = 'reports/speedreport/' + fileid + '.js';
+    myfile = 'reports/speedreport/' + fileid + '.' + extension;
 
     if(myfile!==null){
         try {
             data = "var reportdata = " + data + ";";
-    		if(fs.exists(myfile)){
-    		    fs.remove(myfile);
-    		}
+        if(fs.exists(myfile)){
+            fs.remove(myfile);
+        }
             if(!fs.exists('speedreport.html')){
                 html = fs.read('loadreport/speedreport.html');
             }else{
                 html = fs.read('speedreport.html');
             }
-            if(phantom.args[1]){
-                html=html.replace('{{REPORT_DATA_URI}}', '\/rest\/performance\/js\?uuid\=' + myjson);
-            }else{
-                html=html.replace('{{REPORT_DATA_URI}}', fileid + '.js');
-            }
+            html=html.replace('{{REPORT_DATA_URI}}', fileid + '.js');
             html=html.replace('{{url}}', phantom.args[0]);
             f = fs.open(myfile, "w");
             f.write(html);
