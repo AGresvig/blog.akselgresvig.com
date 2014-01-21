@@ -9,7 +9,7 @@ echo "STATUS"
 git status
 git remote rename origin old
 echo "remotes pre pre-authorized remote url"
-git remote -v
+git remote -a
 git remote add origin $REPO_URL
 git config remote.origin.url $REPO_URL
  
