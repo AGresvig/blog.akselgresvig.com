@@ -464,7 +464,7 @@ var loadreport = {
         var ths = this;
         if((currentTime) >= this.performance.count1){
             //var ashot = page.renderBase64();
-            page.render('filmstrip/screenshot' + this.performance.timer + '.png');
+            page.render('reports/filmstrip/screenshot' + this.performance.timer + '.png');
             this.performance.count2++;
             this.performance.count1 = currentTime + (this.performance.count2 * 100);
             //subtract the time it took to render this image
