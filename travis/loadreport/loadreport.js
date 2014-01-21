@@ -462,9 +462,16 @@ var loadreport = {
         var start = this.timerStart();
         var currentTime = now - this.performance.start;
         var ths = this;
+        var outdir = 'reports/filmstrip/';
+        
+        //If a third arg is supplied, use it to prefix out-dir
+        if(phantom.args[2]){
+          outdir += phantom.args[2] + '/';
+        }
+
         if((currentTime) >= this.performance.count1){
             //var ashot = page.renderBase64();
-            page.render('reports/filmstrip/screenshot' + this.performance.timer + '.png');
+            page.render(outdir + this.performance.timer + '_ms.png');
             this.performance.count2++;
             this.performance.count1 = currentTime + (this.performance.count2 * 100);
             //subtract the time it took to render this image
