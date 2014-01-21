@@ -4,11 +4,10 @@ before_script:
 env:
   global:
   - secure: b9P9JeciY61ygtamzJF8IJAWYNjthfdWq+cou/omYnqd1qGGhliD3C1mUFjp4kD4vp0ntP9ohMjTAK4oprSTENlzQ3JyE4cVQBmlQNUUg6WeYlv9wkneXKggNgZ8zrBghxVbw+W7JzCMlJ6nyiSLqdAt+p9T4VlXu7Nj+jQ6bWE=
-  - FOO="BAR"
   - GH_REPO="AGresvig/blog.akselgresvig.com"
 branches:
   except:
   - gh-pages
 script:
 - docpad deploy-ghpages --env static
-- ./travis/gh-pages-report.sh
+- ./travis/create_loadreports.sh
