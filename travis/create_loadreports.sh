@@ -11,6 +11,9 @@ git pull
 phantomjs travis/loadreport/loadreport.js ${TEST_PAGE} filmstrip $LATEST_SHA
 phantomjs travis/loadreport/speedreport.js ${TEST_PAGE} $LATEST_SHA
 
+#Create index.html of reports in report-dir
+./travis/generate-index.sh reports > reports/index.html
+
 #Add the resulting reports to the gh-branch (so its available on site)
 git checkout gh-pages
 git pull 

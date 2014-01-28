@@ -70,8 +70,8 @@ function printToFile(data) {
         fileid = phantom.args[1];
         myjson = fileid;
     }
-    myjson = 'reports/speedreport/' + fileid + '.js';
-    myfile = 'reports/speedreport/' + fileid + '.' + extension;
+    myjson = 'reports/'+fileid+'/speedreport/data.js';
+    myfile = 'reports/'+fileid+'/speedreport/index.' + extension;
 
     if(myfile!==null){
         try {
