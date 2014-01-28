@@ -6,6 +6,7 @@
 $bodyText = #444
 $headerText = #333
 $lightGrey = #888
+$cyan = #2aa198
 
 /*
 * I use Google Web Fonts.
@@ -45,7 +46,30 @@ $lightGrey = #888
   font-family: 'GT Walsheim';
   src: url("/fonts/GT_Walsheim/GT-Walsheim-Regular-Trial.otf") format("opentype");
 }
-
+@font-face {
+  font-family: 'GT Walsheim';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/GT_Walsheim/GT-Walsheim-Regular-Trial.otf") format("opentype");
+}
+@font-face {
+  font-family: 'GT Walsheim';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/GT_Walsheim/GT-Walsheim-Regular-Trial.otf") format("opentype");
+}
+@font-face {
+  font-family: 'GT Walsheim';
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/GT_Walsheim/GT-Walsheim-Medium-Trial.otf") format("opentype");
+}
+@font-face {
+  font-family: 'GT Walsheim';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/GT_Walsheim/GT-Walsheim-Bold-Trial.otf") format("opentype");
+}
 /** Usage
 font-family: 'PT Sans', sans-serif;
 font-family: 'PT Serif', serif;
@@ -121,30 +145,25 @@ blockquote
 /*** Logo/Title ***/
 .title
     font-family: 'GT Walsheim', sans-serif
-    font-weight: 400
+    font-weight: 600
     a
-        color: $base01
-        text-shadow: 1px 2px 2px $base03;
-    text-transform: none
-    line-height: 1em
-    font-size: 3em
-    letter-spacing: -.07em
+        color: $cyan
+    text-transform: capitalize
+    font-size: 2.5em
     @media only screen and (min-width: 480px)
-        font-size: 3.3em
+        font-size: 3em
     @media only screen and (min-width: 770px)
-        font-size: 4em
+        font-size: 3.5em
     @media only screen and (min-width: 1140px)
-        font-size: 4.5em
+        font-size: 4em
 
 .subtitle
     font-family: 'GT Walsheim', sans-serif
     text-transform: uppercase
-    font-style: italic
-    color: $orange
+    letter-spacing: .2em
     font-size: 1em
-    font-weight: 400
     @media only screen and (min-width: 480px)
-        font-size: 1em
+        font-size: 1.1em
     @media only screen and (min-width: 770px)
         font-size: 1.4em
     @media only screen and (min-width: 1140px)
