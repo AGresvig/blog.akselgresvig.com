@@ -5,6 +5,7 @@ echo -e "*** Running load- and speed-reports on $TEST_PAGE for revision $LATEST_
 
 git branch -a
 git checkout master
+git pull
 
 #Run report scripts using PhantomJS
 phantomjs travis/loadreport/loadreport.js ${TEST_PAGE} filmstrip $LATEST_SHA
