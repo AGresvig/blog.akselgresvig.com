@@ -18,4 +18,4 @@ echo "Adding reports"
 git add reports/.
 
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
-git push https://${GH_TOKEN}@github.com/${REPO} gh-pages > /dev/null
+git push https://${GH_TOKEN}@github.com/${GH_REPO} gh-pages > /dev/null
