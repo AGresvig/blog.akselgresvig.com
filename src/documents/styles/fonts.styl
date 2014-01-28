@@ -2,6 +2,11 @@
 * This stylesheet contains only font-related stuff
 ***********/
 
+//Colors
+$bodyText = #444
+$headerText = #333
+$lightGrey = #888
+
 /*
 * I use Google Web Fonts.
 * PT Serif for bodytext, Oswald for logo/title og headings
@@ -36,6 +41,10 @@
   font-weight: 400;
   src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/qpy-UiLNKP-VfOdbcs6r6-vvDin1pK8aKteLpeZ5c0A.woff) format('woff');
 }
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url("/fonts/GT_Walsheim/GT-Walsheim-Regular-Trial.otf") format("opentype");
+}
 
 /** Usage
 font-family: 'PT Sans', sans-serif;
@@ -54,8 +63,8 @@ body
     color: $bodyText
 
 h1, h2, h3, h4, h5, h6
-    font-family: 'Oswald', sans-serif !important
-    font-weight: 100
+    font-family: 'GT Walsheim', sans-serif !important
+    //font-weight: 100
     color: $headerText
     text-transform: capitalize
     line-height: 1em
@@ -111,7 +120,7 @@ blockquote
 
 /*** Logo/Title ***/
 .title
-    font-family: 'Oswald', sans-serif
+    font-family: 'GT Walsheim', sans-serif
     font-weight: 400
     a
         color: $base01
@@ -128,7 +137,7 @@ blockquote
         font-size: 4.5em
 
 .subtitle
-    font-family: 'Oswald', sans-serif
+    font-family: 'GT Walsheim', sans-serif
     text-transform: uppercase
     font-style: italic
     color: $orange
