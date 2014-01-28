@@ -54,7 +54,6 @@ body.akselgresvig
 
 .header-container
     box-shadow: none
-    border-top: 2px solid $cyan
     z-index: 100
 
     header 
@@ -226,10 +225,13 @@ aside.about
     .profile-pic img
         width: 150px
         border-radius: 88px
-        border: 1px solid $cyan
-        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+        border: 3px solid $lighterGrey
+        //box-shadow: 0 0 20px rgba(0, 0, 0, .2);
         margin: 0 auto;
         display: block;
+
+        &:hover
+            border-color: $cyan
   
 //Inline list of social icons  
 .social-links
