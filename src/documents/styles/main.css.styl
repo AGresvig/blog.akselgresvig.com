@@ -19,6 +19,7 @@ $base00 = #657b83
 $base2 = #eee8d5
 $orange = #cb4b16
 $cyan = #2aa198
+$lightGrey = #888
 
 
 /* ===================
@@ -107,28 +108,15 @@ body.akselgresvig
     p
         font-family: helvetica
 
+//HR rules
+.divider
+    border-top: 1px solid $lightGrey
+
 //Blockquotes yo
 blockquote
   margin: 2em 0
   padding: 0 2em
   border-left: 1px solid $lightGrey
-
-/** Footer **/
-.footer-container,
-.main aside
-    //border-top: 2px solid grey;
-    box-shadow: none //0px 1px 4px rgba(0,0,0,.2);
-
-footer .title
-    float:none
-
-.footer-container,
-footer.wrapper
-    background: $base03
-
-.footer-container
-    border-top: 3px solid $cyan
-/** End footer **/
 
 /* ============= End Theme & Layout ================*/
 
@@ -175,10 +163,8 @@ footer.wrapper
 
     .earlier-posts
         margin-bottom: .4em
-        color: #999
+
     footer.related
-        h3
-            color: $headerText
         ul
             margin: 0
     
@@ -229,28 +215,32 @@ footer.wrapper
 /* ===================
     Sidebar
    =================== */
-.about
+aside.about
+    box-shadow: none
     section
         margin-bottom: 2em
-
+    .bio
+        margin: 1em
+        .quote
+            margin: 1em 0
     .profile-pic img
         width: 150px
-        border-radius: 88px;
-        box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+        border-radius: 88px
+        border: 1px solid $cyan
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
         margin: 0 auto;
         display: block;
-    
-    .social-links
-        ul
-            padding: 0
-            li
-                display: inline-block
-                .icon
-                    color: $lightGrey
-                    font-size: 2em
-                    padding-right: .3em
-                .icon:hover
-                    color: $bodyText
+  
+//Inline list of social icons  
+.social-links
+    text-align: center
+    ul
+        padding: 0
+        li
+            display: inline-block
+            .icon
+                padding-right: .3em
+                
     
 //An attempt to override styles on the AddThis widget, its a little too attention-grabbing
 .akselgresvig 
@@ -308,6 +298,24 @@ header
 /* ===================
     Footer
    =================== */
+.footer-container,
+footer.wrapper
+    background: $cyan
+    .info
+        display: inline-block
+        .title
+            margin-bottom: 0.2em
+        .subtitle
+            float: none
+            margin:0
+        .social-links
+            float: left
+    .techInfo
+        padding: 0
+        margin: 0
+        clear: left
+
+
 
 /** Sticky footer **/
 *
@@ -324,10 +332,7 @@ html, body
 
 .footer-container, 
 .push
-    height: 10em
+    height: 13em
     clear: both
-
-.footer-container footer
-    text-align: center
 /* ============= End Footer ================*/
  

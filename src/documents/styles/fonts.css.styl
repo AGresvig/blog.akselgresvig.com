@@ -5,8 +5,11 @@
 //Colors
 $bodyText = #444
 $headerText = #333
+$mediumGrey = #555
 $lightGrey = #888
+$lighterGrey = #ccc
 $cyan = #2aa198
+$base02 = #073642
 
 /*
 * I use Google Web Fonts.
@@ -108,20 +111,42 @@ a
 .italic
     font-style: italic
     
-.main footer,
-.main aside
-    h3
-        text-transform: uppercase
-        color: $lightGrey
-    .bio p
-        color: $lightGrey
-        font-style: italic
-
+.about
+    .bio
+        text-align: center
+        color: $mediumGrey
+        .icon
+            color: $lighterGrey
+        .quote
+          font-style: italic
+    .social-links
+        .icon
+            font-size: 2em
+            color: $cyan
+        .icon:hover
+            color: $base02
+    
 .footer-container footer
-    h1, h2, h3, h4, h5, h6
+    h1, h2, h3, h4, h5, h6, .icon, a
         color: #fff
     p, span
         color: $lightGrey
+
+    .info
+        .title
+            font-size: 1.7em
+        .subtitle
+            text-transform: uppercase
+            color: $lighterGrey
+            font-size: .8em
+      .social-links
+          .icon
+              font-size: 1.5em
+          .icon:hover
+              color: $base02
+    .techInfo
+        color: $lighterGrey
+
 
 //Make abbreviations stand out less
 abbr
@@ -168,10 +193,6 @@ blockquote
         font-size: 1.4em
     @media only screen and (min-width: 1140px)
         font-size: 1.5em
-
-.footer-container footer .title
-    font-size: 1.5em
-
 /*** End Logo/Title ***/
 
 /*** Blogpost fonts **/
@@ -189,13 +210,16 @@ blockquote
         font-size: 2.5em
         color: $base01
         line-height: 1em
+    footer.related
+        h3
+            color: $headerText
 /*** End Blogpost fonts **/
 
 /*** Icons ***/
-.icon
-    font-size: initial
-
-.icon-lg
-    font-size: 1em
+.akselgresvig 
+    .icon
+        font-size: initial
+    .icon-lg
+        font-size: 1em
 
 /* ============= End Fonts ================*/

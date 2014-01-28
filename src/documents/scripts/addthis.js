@@ -14,7 +14,7 @@ $(function() {
           'share' : {
             'position' : 'left',
             'numPreferredServices' : 5,
-            'offset': {'bottom': '165px'}
+            'offset': {'bottom': '210px'}
           }   
         });
       });
