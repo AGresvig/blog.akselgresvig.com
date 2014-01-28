@@ -44,7 +44,9 @@ docpadConfig = {
                 "/styles/vendor/highlightjs/solarized_light.css",
                 "/styles/responsive-nav.css",
                 "/styles/icomoon.css",
-                "/styles/main.css"
+                "/styles/vendor/initializr.css",
+                "/styles/main.css",
+                "/styles/fonts.css"
             ]
 
             # Scripts
