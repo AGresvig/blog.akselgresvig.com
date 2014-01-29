@@ -43,8 +43,15 @@
         float: left;
     }
 </style>
-<h1 data-bind="text:url"></h1>
+<h1>Site load performance report</h1>
+<h2 data-bind="text:url"></h2>
 
+<div>
+    <h2>Snapshots taken:</h2>
+    <ul>
+        {{SNAPSHOT_LIST}}
+    </ul>   
+</div>
 <div class="graphs">
     <div class="bigGraph">
         <h2>Stacked</h2>

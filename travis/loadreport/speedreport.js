@@ -70,8 +70,8 @@ function printToFile(data) {
         fileid = phantom.args[1];
         myjson = fileid;
     }
-    myjson = 'reports/'+fileid+'/speedreport/data.js';
-    myfile = 'reports/'+fileid+'/speedreport/index.' + extension;
+    myjson = 'reports/'+fileid+'/data.js';
+    myfile = 'reports/'+fileid+'/index.' + extension;
 
     if(myfile!==null){
         try {
@@ -84,7 +84,7 @@ function printToFile(data) {
             }else{
                 html = fs.read('speedreport.html');
             }
-            html=html.replace('{{REPORT_DATA_URI}}', fileid + '.js');
+            html=html.replace('{{REPORT_DATA_URI}}', 'data.js');
             html=html.replace('{{url}}', phantom.args[0]);
             f = fs.open(myfile, "w");
             f.write(html);

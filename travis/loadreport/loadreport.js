@@ -217,32 +217,45 @@ var loadreport = {
             if(phantom.args.indexOf('junit') >= 0){
                 this.printToFile(config,report,'loadreport','xml',phantom.args.indexOf('wipe') >= 0);
             }
-
         }
-
-
     },
 
     filmstrip: {
+        htmlList: '',
         onInitialized: function(page, config) {
-            this.screenshot(new Date().getTime(),page);
+            this.filmstrip.htmlList += this.screenshot(new Date().getTime(),page);
         },
         onLoadStarted: function (page, config) {
             if (!this.performance.start) {
                 this.performance.start = new Date().getTime();
             }
-            this.screenshot(new Date().getTime(),page);
+            this.filmstrip.htmlList += this.screenshot(new Date().getTime(),page);
         },
         onResourceRequested: function (page, config, request) {
-            this.screenshot(new Date().getTime(),page);
+            this.filmstrip.htmlList += this.screenshot(new Date().getTime(),page);
         },
         onResourceReceived: function (page, config, response) {
-            this.screenshot(new Date().getTime(),page);
+            this.filmstrip.htmlList += this.screenshot(new Date().getTime(),page);
         },
-
         onLoadFinished: function (page, config, status) {
-            this.screenshot(new Date().getTime(),page);
-        }
+            this.filmstrip.htmlList += this.screenshot(new Date().getTime(),page);
+
+            //All screencaps are taken
+            //Now we add links to these snapshots to a report html-file
+            var myfile = 'reports/'+phantom.args[2]+'/index.html';
+            if(myfile!==null){
+                try {
+                    var html = fs.read(myfile);
+                    html=html.replace('{{SNAPSHOT_LIST}}', this.filmstrip.htmlList);
+                    f = fs.open(myfile, "w");
+                    f.write(html);
+                    f.flush();
+                    f.close();
+                } catch (e) {
+                    console.log("problem writing to file",e);
+                }
+            }
+        }      
     },
 
     getFinalUrl: function (page) {
@@ -462,21 +475,25 @@ var loadreport = {
         var start = this.timerStart();
         var currentTime = now - this.performance.start;
         var ths = this;
-        var outdir = 'reports/filmstrip/';
+        var outdir = 'reports/';
+        var filename, liItem = '';
         
         //If a third arg is supplied, use it to prefix out-dir
         if(phantom.args[2]){
-          outdir += phantom.args[2] + '/';
+          outdir += phantom.args[2] + '/snapshots/';
         }
 
         if((currentTime) >= this.performance.count1){
             //var ashot = page.renderBase64();
-            page.render(outdir + this.performance.timer + '_ms.png');
+            filename = this.performance.timer + '_ms.png';
+            page.render(outdir + filename);
             this.performance.count2++;
             this.performance.count1 = currentTime + (this.performance.count2 * 100);
             //subtract the time it took to render this image
             this.performance.timer = this.timerEnd(start) - this.performance.count1;
+            liItem = "<li><a href='snapshots/"+filename+"'>"+filename+"</a></li>\n";
         }
+        return liItem;
     },
 
     /**
