@@ -125,14 +125,17 @@ a
             color: $base02
     
 .footer-container footer
-    h1, h2, h3, h4, h5, h6, .icon, a
+    h2, h3, h4, h5, h6, .icon, a
         color: #fff
     p, span
         color: $lightGrey
-
+    a:hover
+        color: $lightGrey
     .info
         .title
             font-size: 1.7em
+            a
+              color: $cyan
         .subtitle
             text-transform: uppercase
             color: $lighterGrey
@@ -141,9 +144,11 @@ a
           .icon
               font-size: 1.5em
           .icon:hover
-              color: $base02
+              color: $lightGrey
     .techInfo
         color: $lighterGrey
+        font-variant: small-caps
+        letter-spacing: .15em
 
 
 //Make abbreviations stand out less

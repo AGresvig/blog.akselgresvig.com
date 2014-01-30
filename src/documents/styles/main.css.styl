@@ -19,9 +19,10 @@ $base00 = #657b83
 $base2 = #eee8d5
 $orange = #cb4b16
 $cyan = #2aa198
+$darkGrey = #383838
 $lightGrey = #888
 $lighterGrey = #ccc
-$lightLightGrey = #f5f5f5
+$lightLightGrey = #FBFBFA
 $base2 = #eee8d5
 $base3 = #fdf6e3
 
@@ -307,9 +308,11 @@ header
    =================== */
 .footer-container,
 footer.wrapper
-    background: $cyan
+    padding: 0
+    background: $darkGrey
     .info
         display: inline-block
+        margin-top: 2em
         .title
             margin-bottom: 0.2em
         .subtitle
@@ -319,7 +322,7 @@ footer.wrapper
             float: left
     .techInfo
         padding: 0
-        margin: 0
+        margin-top: 1em
         clear: left
 
 
@@ -335,11 +338,20 @@ html, body
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -8em;
+    margin: 0 auto -13em;
+    @media only screen and (max-width: 770px)
+        //The footer text takes up two lines at this res so we
+        //need more spacing to push the footer down
+        margin: 0 auto -14.5em;
 
 .footer-container, 
 .push
     height: 13em
     clear: both
+    @media only screen and (max-width: 770px)
+        //The footer text takes up two lines at this res so we
+        //need more spacing to push the footer down
+        height: 14.5em
+
 /* ============= End Footer ================*/
  
