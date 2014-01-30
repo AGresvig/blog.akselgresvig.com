@@ -19,10 +19,10 @@ $base00 = #657b83
 $base2 = #eee8d5
 $orange = #cb4b16
 $cyan = #2aa198
-$darkGrey = #383838
-$lightGrey = #888
-$lighterGrey = #ccc
-$lightLightGrey = #FBFBFA
+$darkGrey = darken(grey, 60%)
+$lightGrey = lighten(grey, 30%)
+$lighterGrey = lighten(grey, 50%)
+$lightLightGrey = lighten(grey, 98%)
 $base2 = #eee8d5
 $base3 = #fdf6e3
 
@@ -140,7 +140,7 @@ blockquote
         padding: 0
     li a
         padding: 3px
-        background-color: $base2
+        background-color: rgba($cyan, 9%)
     li a:hover
         background-color: $base02
 
@@ -226,6 +226,8 @@ aside.about
         margin-bottom: 2em
     .bio
         margin: 1em
+        min-width: 19em
+        word-spacing: .1em
         .quote
             margin: 1em 0
     .profile-pic img
@@ -316,7 +318,7 @@ footer.wrapper
         .title
             margin-bottom: 0.2em
         .subtitle
-            float: none
+            clear: left
             margin:0
         .social-links
             float: left
