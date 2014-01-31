@@ -12,7 +12,10 @@ article.mainpage
 
     div(class=latestPost ? 'latest' : 'previous').post-item
       h1.post-title
-        a(href=post.url)= post.title
+        if !latestPost
+          a(href=post.url)= post.title
+        else
+          != post.title
       .post-metadata.subtle-text
         include ../includes/post-metadata
     
@@ -20,7 +23,8 @@ article.mainpage
         if latestPost
           p.post-summary= post.summary
         .post-image
-          img(src='/images/posts/'+post.image, alt='Post image')
+          a(href=post.url)
+            img(src='/images/posts/'+post.image, alt='Post image')
         if latestPost
           //- Latest post is displayed in full
           article.post-content
