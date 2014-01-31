@@ -225,9 +225,8 @@ aside.about
     section
         margin-bottom: 2em
     .bio
-        margin: 1em
-        min-width: 19em
-        word-spacing: .1em
+        margin: 1em auto
+        max-width: 30em
         .quote
             margin: 1em 0
     .profile-pic img
@@ -326,6 +325,10 @@ footer.wrapper
         padding: 0
         margin-top: 1em
         clear: left
+        @media only screen and (max-width: 769px)
+            //In single column mode we get the sharing-bar at the bottom..
+            margin-bottom: 1em
+
 
 
 
