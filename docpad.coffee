@@ -67,7 +67,7 @@ docpadConfig = {
             @getCollection("html").findAllLive({
             relativeOutDirPath: 'pages', isPage:true})
         posts: ->
-            @getCollection("html").findAllLive({relativeOutDirPath: 'posts'})
+            @getCollection("html").findAllLive({relativeOutDirPath: 'posts'}, [{date:-1}])
 
     # =================================
     # Plugin Configuration
