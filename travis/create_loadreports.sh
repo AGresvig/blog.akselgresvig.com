@@ -5,13 +5,13 @@ git branch -a
 git checkout master
 git pull
 
-echo -e "*** Running load-report on $TEST_PAGE for revision $LATEST_SHA"
-#Run report scripts using PhantomJS
-phantomjs --debug=true travis/loadreport/loadreport.js ${TEST_PAGE} filmstrip $LATEST_SHA
-echo -e "*** Running speed-report"
-ls -al reports/$LATEST_SHA
 
+#Run report scripts using PhantomJS
+echo -e "*** Running speed-report on $TEST_PAGE for revision $LATEST_SHA"
 phantomjs --debug=true travis/loadreport/speedreport.js ${TEST_PAGE} $LATEST_SHA
+
+echo -e "*** Running load-report"
+phantomjs --debug=true travis/loadreport/loadreport.js ${TEST_PAGE} filmstrip $LATEST_SHA
 
 echo -e "*** Generating reports/index.html"
 
