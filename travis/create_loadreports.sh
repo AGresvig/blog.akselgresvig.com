@@ -5,17 +5,18 @@ git branch -a
 git checkout master
 git pull
 
-echo -e "*** Running load- and speed-reports on $TEST_PAGE for revision $LATEST_SHA"
+echo -e "*** Running load-report on $TEST_PAGE for revision $LATEST_SHA"
 #Run report scripts using PhantomJS
-phantomjs travis/loadreport/loadreport.js ${TEST_PAGE} filmstrip $LATEST_SHA
-phantomjs travis/loadreport/speedreport.js ${TEST_PAGE} $LATEST_SHA
+phantomjs --debug=true travis/loadreport/loadreport.js ${TEST_PAGE} filmstrip $LATEST_SHA
+echo -e "*** Running speed-report"
+ls -al reports/$LATEST_SHA
+
+phantomjs --debug=true travis/loadreport/speedreport.js ${TEST_PAGE} $LATEST_SHA
 
 echo -e "*** Generating reports/index.html"
 
 #Create index.html of reports in report-dir
 ./travis/generate-index.sh reports > reports/index.html
-
-sleep 10s
 
 #Add the resulting reports to the gh-branch (so its available on site)
 git checkout gh-pages
