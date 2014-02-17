@@ -2,7 +2,7 @@ TEST_PAGE="http://blog.akselgresvig.com/"
 LATEST_SHA=$(git rev-parse HEAD)
 
 git fetch --all
-git branch -a
+git branch -r
 git checkout master
 
 #Run report scripts using PhantomJS
