@@ -21,12 +21,15 @@ git checkout --track upstream/gh-pages
 
 #Get the reports archive from our previous build (that was wiped by the recent "docpad deploy to gh-pages")
 git checkout HEAD@1 -- reports/
+ls -al reports
 
 #And introduce our new reports
 git stash pop
+ls -al reports
 
 #Get the "generate-index"-script from the master branch now, we need it..
 git checkout master -- travis/generate-index.sh
+ls -al reports
 
 #Create updated index.html listing reports in report-dir
 echo -e "*** Generating reports/index.html"
