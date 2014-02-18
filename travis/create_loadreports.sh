@@ -3,7 +3,6 @@ LATEST_SHA=$(git rev-parse HEAD)
 
 #Set upstream remote
 git remote add upstream https://${GH_TOKEN}@github.com/${GH_REPO}.git > /dev/null
-
 git fetch -qn upstream > /dev/null
 
 #Run report scripts using PhantomJS
@@ -23,4 +22,4 @@ echo "Adding reports"
 git add -f reports/.
 
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
-git push -q # gh-pages > /dev/null
+git push > /dev/null
