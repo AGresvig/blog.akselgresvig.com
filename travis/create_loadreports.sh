@@ -1,27 +1,26 @@
 TEST_PAGE="http://blog.akselgresvig.com/"
 LATEST_SHA=$(git rev-parse HEAD)
 
-git fetch --all
-git branch -r
-git checkout master
+#Set upstream remote
+git remote add upstream https://${GH_TOKEN}@github.com/${GH_REPO}.git > /dev/null
+
+git fetch -qn upstream > /dev/null
 
 #Run report scripts using PhantomJS
 echo -e "*** Running speed-report on $TEST_PAGE for revision $LATEST_SHA"
 phantomjs travis/loadreport/speedreport.js ${TEST_PAGE} $LATEST_SHA
-
 echo -e "*** Running load-report"
 phantomjs travis/loadreport/loadreport.js ${TEST_PAGE} filmstrip $LATEST_SHA
 
 echo -e "*** Generating reports/index.html"
-
 #Create index.html of reports in report-dir
 ./travis/generate-index.sh reports > reports/index.html
 
+git checkout --track upstream/gh-pages
+
 #Add the resulting reports to the gh-branch (so its available on site)
-git checkout gh-pages
-git pull 
 echo "Adding reports"
-git add reports/.
+git add -f reports/.
 
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
-git push https://${GH_TOKEN}@github.com/${GH_REPO} gh-pages > /dev/null
+git push -q # gh-pages > /dev/null
