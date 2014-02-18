@@ -11,15 +11,31 @@ phantomjs travis/loadreport/speedreport.js ${TEST_PAGE} $LATEST_SHA
 echo -e "*** Running load-report"
 phantomjs travis/loadreport/loadreport.js ${TEST_PAGE} filmstrip $LATEST_SHA
 
-echo -e "*** Generating reports/index.html"
-#Create index.html of reports in report-dir
-./travis/generate-index.sh reports > reports/index.html
+#Add and stash the new reports. We will merge them with the previous ones next (they won't be commited on this branch)
+git add reports
+echo -e "Stashing newly generated reports:"
+git stash
 
+#Checkout the gh-pages branch, where we will commit this stuff
 git checkout --track upstream/gh-pages
 
+#Get the reports archive from our previous build (that was wiped by the recent "docpad deploy to gh-pages")
+git checkout HEAD@1 -- reports/
+
+#And introduce our new reports
+git stash pop
+
+#Get the "generate-index"-script from the master branch now, we need it..
+git checkout master -- travis/generate-index.sh
+
+#Create updated index.html listing reports in report-dir
+echo -e "*** Generating reports/index.html"
+./travis/generate-index.sh reports > reports/index.html
+
 #Add the resulting reports to the gh-branch (so its available on site)
-echo "Adding reports"
+echo "Adding new reports"
+git status -s
 git add -f reports/.
 
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
-git push > /dev/null
+git push -q > /dev/null
