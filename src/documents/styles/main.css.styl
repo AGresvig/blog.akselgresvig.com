@@ -131,7 +131,7 @@ blockquote
    =================== */
 .post-metadata 
     line-height: 1.2em
-    margin: .5em 0
+    margin: 1em 0
     *
         margin: 0 .1em
         display: inline-block 
@@ -158,7 +158,9 @@ blockquote
     position: relative
 
     .post-title
-        margin-bottom: .1em
+        margin-bottom: .25em
+    .post-subtitle
+        margin: 0
     
     .post-body 
         margin-top: 0
@@ -176,17 +178,23 @@ blockquote
 .content .latest.post-item,
 .content .blogpost
     .post-image
-        margin: 2em 2%        
+        margin: 2em 2%
+        text-align: center
     .post-content 
         margin: 3em 2% 5em 0       
     .post-image img
-        width: 100%
+        max-width: 95%        
+        max-height: 500px        
+        height: auto
     .post-body, .post-content 
         float: none
         width: initial
     .divider
         margin-top: 0
-    
+    iframe
+        margin: 5%
+        max-width: 95%
+        
 .mainpage .previous.post-item 
     @media only screen and (min-width: 770px)
         margin-right: -45% //We're making it span on the bigger screens
