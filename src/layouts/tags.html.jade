@@ -21,7 +21,8 @@ article.tagindex
       .post-body
         .post-image
           img(src='/images/posts/'+post.image, alt='Post image')
-         p.post-content= post.summary
+         .post-summary
+            t(render="markdown")= post.summary
       hr.divider
 
 include ../includes/about_aside

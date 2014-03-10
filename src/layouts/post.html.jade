@@ -11,7 +11,8 @@ article.blogpost
       a(target="_blank", rel="author", href="https://plus.google.com/u/0/+AkselGresvig?rel=author") Aksel Gresvig
 
   
-  p.post-summary= post.summary
+  .post-summary
+    t(render="markdown")= post.summary
   .post-image
     img(src='/images/posts/'+post.image, alt='Post image')
   .post-content
