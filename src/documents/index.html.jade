@@ -5,39 +5,50 @@ isPage: true
 ---
 article.mainpage  
   - var numPosts = getCollection("posts").length
+  - var posts = getCollection("posts").toJSON()
+  - var post = posts[0]
 
-  //- List out formatted sections for 5 latest posts, where first will be shown in full
-  each post, index in getCollection("posts").toJSON().slice(0,4)
-    - var latestPost = index == 0 
+  //- Display the first post in full
+  .latest.post-item
+    h1.post-title= post.title
+    if post.subtitle
+      h2.post-subtitle= post.subtitle
+    .post-metadata.subtle-text
+      include ../includes/post-metadata
+  
+    .post-body
+      .post-summary
+        t(render="markdown")= post.summary
+      .post-image
+        a(href=post.url)
+          img(src='/images/posts/'+post.image, alt='Post image')
+      //- Latest post is displayed in full
+      article.post-content
+        != post.contentRenderedWithoutLayouts
+        h4.italic
+          a(href=post.url) See post to view comments and related content
+      if numPosts > 1
+        h2.earlier-posts Earlier posts:
+      
+    hr.divider
 
-    div(class=latestPost ? 'latest' : 'previous').post-item
+  //- List out formatted sections for 4 latest previous posts
+  each post, index in posts.slice(1,4)
+    .previous.post-item
       h1.post-title
-        if !latestPost
-          a(href=post.url)= post.title
-        else
-          != post.title
+        a(href=post.url)= post.title
       if post.subtitle
         h2.post-subtitle= post.subtitle
       .post-metadata.subtle-text
         include ../includes/post-metadata
     
       .post-body
-        if latestPost
-          .post-summary
-            t(render="markdown")= post.summary
         .post-image
           a(href=post.url)
             img(src='/images/posts/'+post.image, alt='Post image')
-        if latestPost
-          //- Latest post is displayed in full
-          article.post-content
-            != post.contentRenderedWithoutLayouts
-            h4.italic
-              a(href=post.url) See post to view comments and related content
-          if numPosts > 1
-            h2.earlier-posts Earlier posts:
-        else
-          p.post-content= post.summary
+        .post-summary
+          t(render="markdown")= post.summary
+
       hr.divider
 
   //if we have more posts, show them in a regular list format 
@@ -45,7 +56,7 @@ article.mainpage
     footer
       h3 Older posts
       ul
-        each oldPost in getCollection("posts").toJSON().slice(4)
+        each oldPost in posts.slice(4)
           li
             a(href=oldPost.url)= oldPost.title 
             |  on 
