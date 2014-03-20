@@ -221,6 +221,7 @@ blockquote
             float: left
             width: 65%
             margin-bottom: 1em
+            overflow: hidden
 
         
 /* ============= End Index & blogpost page ==============*/
@@ -330,14 +331,12 @@ footer.wrapper
         .social-links
             float: left
     .techInfo
-        padding: 0
-        margin-top: 1em
-        clear: left
-        @media only screen and (max-width: 769px)
-            //In single column mode we get the sharing-bar at the bottom..
-            margin-bottom: 1em
-
-
+        height: 3em
+        position: relative
+        p
+            bottom: 0.5em;
+            position: absolute;
+            line-height: 1em;
 
 
 /** Sticky footer **/
@@ -352,19 +351,11 @@ html, body
     height: auto !important;
     height: 100%;
     margin: 0 auto -13em;
-    @media only screen and (max-width: 770px)
-        //The footer text takes up two lines at this res so we
-        //need more spacing to push the footer down
-        margin: 0 auto -14.5em;
 
 .footer-container, 
 .push
     height: 15em
     clear: both
-    @media only screen and (max-width: 770px)
-        //The footer text takes up two lines at this res so we
-        //need more spacing to push the footer down
-        height: 16.5em
 
 /* ============= End Footer ================*/
  
