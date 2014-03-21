@@ -45,7 +45,7 @@ article.mainpage
       .post-body
         .post-image
           a(href=post.url)
-            img(src='/images/posts/'+post.image, alt='Post image')
+            //img(src=getThumbnail('/images/posts/'+post.image, { w: 100, h: 100 }), alt='Post image')
         .post-summary
           t(render="markdown")= post.summary
 
