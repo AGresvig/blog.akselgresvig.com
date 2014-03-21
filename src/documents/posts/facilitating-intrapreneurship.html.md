@@ -8,7 +8,7 @@ tags:
     - motivation
     - innovation
 summary: "The **[Software 2014](http://event.dnd.no/software/)** conference took place in Oslo last week, and I held a talk on the 'Intrapreneurship' track together with my brilliant colleague Ismar Slomic (@islomic). We talked about some things we have done internally at Accenture Norway over the past year to try to create something new and exciting. Let me try to explain what 'Intrapreneurship in practice' means to us, and how it has helped us as a large organization to create new momentum for innovation and learning."
-
+draft: true
 image: 'keep-calm-and-stay-relevant.jpg'
 
 
