@@ -32,7 +32,8 @@ article.blogpost
             a(href=relatedPost.url)= relatedPost.title 
             |  on 
             != relatedPost.date.toDateString()
-    
+  include ../includes/disclaimer
+     
 include ../includes/about_aside
 
 footer#comments
