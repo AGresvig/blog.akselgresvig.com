@@ -2,7 +2,7 @@
 title: Facilitating Intrapreneurship
 subtitle: In larger organizations
 layout: post
-date: 2014-03-07
+date: 2014-03-25
 tags:
     - intrapreneurship
     - motivation
@@ -13,6 +13,16 @@ image: 'keep-calm-and-stay-relevant.jpg'
 
 
 ---
+
+## What we've done
+* Organized *Hackfests* - company sponsored internal hackathons ran over weekends where the goal is to learn and play with new technology. Full freedom for attendees to choose approach (i.e. technology stack) and only partly predefined deliverables, often none at all
+* Held internal *workshops* to help bring colleagues up to speed on new tech and "spread the word"
+* Arranged open *meetups* where we share project experiences with both internal and industry colleagues (see [ACN Fagkveld](http://acnfagkveld.herokuapp.com/))
+* Held presentations at *conferences*, for example [JavaZone](http://jz13.java.no/)
+* Ran workshops and presentations at *schools across the country* on new & cool tech that we know the students want to learn more about
+* *Shared* everything we've done of this sort on social media under the hashtag #acntech, for our colleagues and friends to stay up to date on what's going on in the company's tech scene
+
+*And "we" in this context represents any employee(s) who has been eager to learn, try, or collaborate on something technology-related, and wanted to do something about it.*
 
 ## Background
 Accenture is a large organization. The world's largest consulting firm, in fact. We offer a wide spectrum of services to an even wider range of industries, but in my department, *Architecture, Delivery & Integration*, we care most about techonology. We care about delivering solid technical solutions to our customers. To do that, we need inspired, motivated colleagues who have a passion for the technologies that drive our products, and who engage to improve on earlier experiences. This engagement requires more than what you get out of the hours helping the client between 9 and 5.
