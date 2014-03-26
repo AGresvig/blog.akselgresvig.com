@@ -211,18 +211,20 @@ blockquote
         @media only screen and (max-width: 480px)
             text-align: center; //Center picture on smaller screens
 
-    @media only screen and (min-width: 550px)
+    @media only screen and (min-width: 650px)
+        position: relative
         .post-body
             //Side-by-side post text and image on larger screens (stacked on smaller)
             .post-title
                 width: 65%
             .post-summary
                 width: 65%
-                float: left
             .post-metadata
                 width: 65%
         .post-image
-            float: right;
+            position: absolute
+            bottom: 30%
+            right: 0
             width: 30%
             img
                 width: 100%
