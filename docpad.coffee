@@ -62,12 +62,16 @@ docpadConfig = {
 
         getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title
 
+        getTagUrl: (tag) ->
+            doc = docpad.getFile({tag:tag})
+            return doc?.get('url') or ''
+
     collections:
         pages: ->
             @getCollection("html").findAllLive({
             relativeOutDirPath: 'pages', isPage:true})
         posts: ->
-            @getCollection("html").findAllLive({relativeOutDirPath: 'posts'}, [{date:-1}])
+            @getCollection("html").findAllLive({relativeOutDirPath: 'posts', ignored: {$ne: true}}, [{date:-1}])
 
     # =================================
     # Plugin Configuration
@@ -99,6 +103,14 @@ docpadConfig = {
 
         thumbnails:
             imageMagick: true
+
+        tags:
+            extension: '.html'
+            injectDocumentHelper: (document) ->
+                document.setMeta(
+                    layout: 'tags'
+                    data: " "
+                )
 }
 
 # Export the DocPad Configuration
