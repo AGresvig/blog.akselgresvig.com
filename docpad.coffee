@@ -96,6 +96,9 @@ docpadConfig = {
                 close = '</code></pre>'
 
                 return open + body + close
+
+        thumbnails:
+            imageMagick: true
 }
 
 # Export the DocPad Configuration
