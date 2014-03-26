@@ -13,16 +13,19 @@ article.tagindex
   //- List out formatted sections for 5 latest posts, where first will be shown in full
   each post in posts
     .previous.post-item
-      h2.post-title
-        a(href=post.url)= post.title
-      .post-metadata.subtle-text
-        include ../includes/post-metadata
-    
+      .post-image
+        img(src=getThumbnail('/images/posts/'+post.image, { w: 250, h: 200, q: 90 }), alt='Post image')
+
       .post-body
-        .post-image
-          img(src='/images/posts/'+post.image, alt='Post image')
-         .post-summary
-            t(render="markdown")= post.summary
+        h1.post-title
+          a(href=post.url)= post.title
+        if post.subtitle
+          h2.post-subtitle= post.subtitle
+        .post-metadata.subtle-text
+          include ../includes/post-metadata
+        .post-summary
+          t(render="markdown")= post.summary
+
       hr.divider
 
 include ../includes/about_aside
