@@ -8,7 +8,7 @@ tags:
     - community
 summary: "I attended O'Reilly Media's [Fluent 2014](http://fluentconf.com/fluent2014) conference at the Marriot Marquis hotel in San Francisco, California last week. I flew over with 5 web- and frontend-loving colleagues and spent the week there. It was an excellent experience - let me recap the best talks I attended."
 draft: false
-image: 'fluent_2014.jpeg'
+image: 'fluent_2014.png'
 
 ---
 
