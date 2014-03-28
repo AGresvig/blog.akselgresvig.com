@@ -1,7 +1,3 @@
-#Fade in page when refreshing
-#if !nav then 
-  $("body").hide().fadeIn(1000)
-
 #Init responsive nav menu
 #nav = responsiveNav(".nav-collapse", {label: ""})
 
