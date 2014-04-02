@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      
+    <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         
+    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         
+    <html class="no-js lt-ie9"> 
+        <div id="i8-warning">
+            <h1>You are using an outdated browser</h1>
+            <p>I'm sorry but I don't have time to deal with Internet Explorer's bugs and inconsistensies. Please <a href="http://browsehappy.com/">upgrade to a modern browser</a> if you wish to enjoy my blog.</p>
+        </div>
+        <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <!-- Standard Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- Site Properties -->
+        <title>Fluent 2014 in retrospective | Aksel Gresvig's blog</title>
+        <meta name="description" content="I attended O'Reilly Media's [Fluent 2014](http://fluentconf.com/fluent2014) conference at the Marriot Marquis hotel in San Francisco, California last week. I flew over with 5 web- and frontend-loving colleagues and spent the week there. It was an excellent experience - let me recap the best talks I attended." />
+        <meta name="author" content="Aksel Gresvig" />
+
+        <!-- Icons -->
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        <!-- for google plus authorship -->
+        <link rel="author" href="https://plus.google.com/+AkselGresvig/posts"/>
+
+        <!-- DocPad Meta -->
+        <meta name="generator" content="DocPad v6.64.0" />
+
+        <!-- DocPad Styles + Our Own -->
+        <link  rel="stylesheet" href="/styles/vendor/normalize.css" /><link  rel="stylesheet" href="/styles/vendor/highlightjs/solarized_light.css" /><link  rel="stylesheet" href="/styles/responsive-nav.css" /><link  rel="stylesheet" href="/styles/icomoon.css" /><link  rel="stylesheet" href="/styles/vendor/initializr.css" /><link  rel="stylesheet" href="/styles/main.css" /><link  rel="stylesheet" href="/styles/fonts.css" />
+
+    </head>
+    <body class="akselgresvig">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container"><header class="wrapper clearfix"><div class="logo-box"><h1 class="title"><a href="/">aksel gresvig</a></h1><h4 class="subtitle">Techblog</h4></div></header></div><div class="main-container"><div class="main wrapper clearfix"><section class="content"><article class="blogpost"><h1 class="post-title">Fluent 2014 in retrospective</h1><div class="post-metadata subtle-text"><div class="iconwrapper"><div class="icon icon-calendar2"></div><span>Posted on Sat Mar 22 2014</span></div><div class="tags"><div class="icon icon-tags"></div><ul><li><a href="/tags/fluent2014.html">fluent2014</a>,</li><li><a href="/tags/trends.html">trends</a>,</li><li><a href="/tags/community.html">community</a></li></ul></div><span class="author">Author: <a target="_blank" rel="author" href="https://plus.google.com/u/0/+AkselGresvig?rel=author">Aksel Gresvig</a></span></div><div class="post-summary"><p>I attended O'Reilly Media&rsquo;s <a href="http://fluentconf.com/fluent2014">Fluent 2014</a> conference at the Marriot Marquis hotel in San Francisco, California last week. I flew over with 5 web- and frontend-loving colleagues and spent the week there. It was an excellent experience - let me recap the best talks I attended.</p>
+</div><div class="post-image"><img src="/images/posts/fluent_2014.png" alt="Post image"/></div><div class="post-content"><h2>Javascript, VMs, the cloud, the past, present, and the future</h2>
+
+<p>In addition to being an excellent speaker and hilariously funny, <em>Scott Hanselman</em> from Microsoft (<a href="https://twitter.com/shanselman" target="_blank">@shanselman</a>) does a <em>great</em> job of explaining the cloud, VMs, the past, present and future of the web, and much more.<br/><br/>
+I <strong>highly</strong> recommend watching his keynote:</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/UzyoT4DziQ4" frameborder="0" allowfullscreen></iframe>
+
+<h2>Isomorphic Javascript apps</h2>
+
+<p>by <em>Spike Brehm</em> of airbnb (<a href="https://twitter.com/spikebrehm" target="_blank">@spikebrehm</a>). (Slides not up yet).   </p>
+
+<p>Spike spoke about something I think is the way of the future - building apps that can live on both the server and the client. Essentially, code your app in an isomorphic manner and it can be rendered on the server and sent to the client (giving reduced client load, among other things), or in the browser SPA-style (giving a snappier UI, among other things).<br><br/>
+Done right, this gives:</p>
+
+<ul>
+<li>Better performance. Faster initial page load - bootstrapping all the JS of an SPA will always take more time than rendering pure markup</li>
+<li>SEO - crawlable dynamic apps. SPAs aren&rsquo;t crawlable by default</li>
+<li>Maintainability - reduce code duplication</li>
+</ul>
+
+<p>The future, according to Spike: </p>
+<pre><code> <span class="literal">+</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">+</span>
+ <span class="comment">|Client</span> <span class="comment">(Javascript)</span>                 <span class="comment">|</span>
+ <span class="comment">|</span>-<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>
+ <span class="comment">|</span> <span class="comment">DOM</span> <span class="comment">Manipulation</span>                   <span class="comment">|</span>
+ <span class="comment">|</span> <span class="comment">Animation</span>                          <span class="comment">|</span>
+ <span class="literal">+</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">^</span>-<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">+</span>
+                  <span class="comment">|</span>
+                  <span class="literal">+</span>
+                  <span class="comment">|</span>
+ <span class="literal">+</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">v</span>-<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">+</span>
+ <span class="comment">|Shared</span> <span class="comment">(Javascript)</span>                 <span class="comment">|</span>
+ <span class="comment">|</span>-<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>
+ <span class="comment">|</span> <span class="comment">Routing</span>                            <span class="comment">|</span>
+ <span class="comment">|</span> <span class="comment">View</span> <span class="comment">Layer</span>                         <span class="comment">|</span>
+ <span class="comment">|</span> <span class="comment">Application</span> <span class="comment">Logic</span>                  <span class="comment">|</span>
+ <span class="literal">+</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">^</span>-<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">+</span>
+                  <span class="comment">|</span>
+                  <span class="literal">+</span>
+                  <span class="comment">|</span>
+ <span class="literal">+</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">v</span>-<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">+</span>
+ <span class="comment">|Server</span> <span class="comment">(Ruby/Python/Java/PHP)</span>       <span class="comment">|</span>
+ <span class="comment">|</span>-<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="comment">|</span>
+ <span class="comment">|</span> <span class="comment">Persistence</span>                        <span class="comment">|</span>
+ <span class="literal">+</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">+</span>
+</code></pre>
+<p>See all that shared goodness in the middle? It is isomorphic. Multi-platform.</p>
+
+<p>I talked to Spike after the session and asked him a question that I didn&rsquo;t feel was answered properly in the talk:<br/>
+Isomorphic code is great, but you&rsquo;ll eventually have to deploy it <em>somewhere</em>. Either it lives on the server, or on the client. A view is rendered one place, not two. So how do I know where to deploy my app?</p>
+
+<blockquote>
+<p>&ldquo;It depends, right.&rdquo;<br/>
+<em>- Spike</em> </p>
+</blockquote>
+
+<p>And I totally agree. The use-case should dictate where the various moving parts of your application lives. What is the target device? What are we showing? Collecting? That&rsquo;s why you write code that can run where it makes the most sense.</p>
+
+<h2>Delivering the goods</h2>
+
+<blockquote>
+<p>&ldquo;Latency is the bottleneck for HTTP&rdquo;<br/>
+<em>- Paul Irish of Google (<a href="https://twitter.com/paul" target="_blank">@paul</a>_irish)</em>, in his performance-oriented keynote</p>
+</blockquote>
+
+<p>In other words, the primary goal when optimizing web apps for performance should be to <strong>minimize requests</strong>. Protip from Paul: Include CSS (i.e. layout) that is critical for your <strong>above the fold</strong> initial view directly in the first HTML document that is sent over the wire. The goal should be to deliver something that can be rendered to the user in <strong>the first request and make it less than 14KB</strong>. That way, the user will in most cases see something useful on the screen in the first second, which is an important milestone.<br/>
+Paul&rsquo;s keynote was very informative. You can <a href="http://www.youtube.com/embed/R8W_6xWphtw?autoplay=1">watch it here</a>.</p>
+
+<h2><a href="https://twitter.com/search?q=%23Frame&src=hash"  target="_blank">#Frame</a>workPride</h2>
+
+<p>Tom Dale and Yehuda Katz (<a href="https://twitter.com/tomdale" target="_blank">@tomdale</a>, @wycats) of <em>Tilde, Inc.</em> held a keynote on frameworks vs. libraries, focused on <a href="http://emberjs.com/">Ember.JS</a>. I learned a lot and got a more nuanced perspective on the whole library vs. framework debate in this talk. <a href="https://www.youtube.com/watch?v=jScLjUlLTLI">Watch it here</a> if you can spare 20 mins.</p>
+
+<blockquote>
+<p>&ldquo;Angular is a toolset for building your own framework. Basically this is saying you should build a custom bespoke one-of-a-lifetime framework every time you&rsquo;re building an app.&rdquo;<br/>
+<em>- Tom</em></p>
+</blockquote>
+
+<p>I have spent the last couple years working on apps using Backbone and Angular which, although fundamentally different in what they provide and how they affect (or rather, don&rsquo;t affect) your application architecture, are both extremely flexible and complex tools for building powerful tailored SPAs. Therefore it was interesting to see the focus on simplicity and <em>inflexibility</em> that Ember provide and the reasoning behind it. Obviously, inflexibility isn&rsquo;t the goal, but it comes with a lot of out-of-the-box functionality, meaning that choices are made for you. So that you can focus on doing cool stuff that feels right, fast, rather than figuring out how to do the stuff everyone else has done before you. </p>
+
+<blockquote>
+<p>&ldquo;It&rsquo;s an API that makes doing the wrong thing feeling just as good as doing the right thing.&rdquo;<br/>
+<em>- Tom</em> defining a maximum flexible API</p>
+</blockquote>
+
+<p>I get the feeling Ember is a great framework if you just want to make a modern, best-practice, modern webapp, that will feel like other webapps. Which is the goal 90%+ of projects, anyway. If you want a lot of very custom functionality, and/or you have very specific requirements for application feel and behavior, then Angular or Backbone may suit your use case better. But keep in mind that the flexibility will cost you effort. </p>
+
+<h2>Managing Javascript complexity</h2>
+
+<p>by <em>Jarrod Overson</em> (<a href="https://twitter.com/jsoverson" target="_blank">@jsoverson</a>) of Riot Games, the guys behind League of Legends.<a href="http://www.slideshare.net/JarrodOverson/managing-javascript-complexity-in-teams-fluent">Slides here</a>.  </p>
+
+<p>In the introduction of his talk, Jarrod provided his very interesting thoughts on what the field of web development has become, and where it is going. Some excerpts:</p>
+
+<ul>
+<li>Dynamic languages are messy - more challenges than &ldquo;regular&rdquo; languages.</li>
+<li>The web dev. talent pool is nuts - people have used widely differing tools to build websites. </li>
+<li>Oh and btw, abandon the atrocities such as the &ldquo;frontend developer&rdquo; term, use Web Platform Engineer instead! Who focuses <em>only</em> on the frontend anyways? If you have no clue of what goes on at the other side of the wire, you&rsquo;re not a very useful developer. </li>
+<li>Progress in the field is difficult because <em>everyone</em> has an opinion, everyone wants to introduce something new - but the future cannot get here all at once. </li>
+<li>The web is HARD. Even the giants pivot and backtrack. </li>
+<li>Why are we even here? Because JS won. Flash, Java, Silverlight - all stuff generated by huge companies with a lot of money. What the hell will JS it be like in three to five years? </li>
+<li>HTML5 is bullshit. Such an overloaded term.</li>
+</ul>
+
+<p>But the core of the talk focused on what we can do to deal with complexity in large Javascript-based projects. I really recommend zapping through his slides (part 2 and 3) to see what he suggests, it makes sense even without the narrative.</p>
+
+<h2>Automate all the frontend-things!</h2>
+
+<p>by <em>Kitt Hodsden</em>, <a href="https://twitter.com/kitt" target="_blank">@kitt</a> - CodingClan LLC. <a href="http://cdn.oreillystatic.com/en/assets/1/event/106/Automate%20All%20the%20Front-End%20Things_%20Presentation%201.pdf">Slides here</a>.  </p>
+
+<p>In this workshop, Kitt took us through a set of tools and utilities that can make your way of working <em>magical</em> as she put it, speeding things up and helping your web development workflow stay DRY. </p>
+
+<h3>Synchronized browser testing</h3>
+
+<p>The first task we automated was making sure everything works well in all browsers. Apart from the <a href="http://livereload.com/">LiveReload browser extension</a> which I&rsquo;ve used before, she introduced <a href="http://browsersync.io/">BrowserSync</a> - a fantastic tool that watches your files or local dev. environments for changes, and essentially broadcasts not only file changes but also <em>user interaction</em> to <strong>all connected browsers.</strong> </p>
+
+<p>In practice this enables you to throw up your site on for example your laptop, iPad, and smartphone simultaneously, then click around the site on your laptop and have the other devices' browser imitate the user actions. Amazing way to cross-test your site! Both LiveReload and BrowserSync can of course be integrated with build tools like Grunt.</p>
+
+<h3>Other cool stuff</h3>
+
+<p>She showed us the powerful <a href="http://www.alfredapp.com/">Alfred keylauncher for OSX</a> (and Windows alternatives), which when supercharged with <a href="https://github.com/zenorocha/alfred-workflows/">workflow plugins</a> puts all sorts of powerful workflow utilities just a couple keystrokes away. I already use Alfred and I love it, especially the <a href="https://github.com/willfarrell/alfred-pkgman-workflow">package managers</a> and <a href="https://github.com/willfarrell/alfred-encode-decode-workflow">encode/decode</a> plugins.</p>
+
+<p>Everyone probably knows <a href="http://gruntjs.com/">Grunt</a> by know, which is ironic as it&rsquo;s in the process of being superseded by <a href="http://gulpjs.com/">Gulp</a> these days, a classic JS community move ;). Regardless, Kitt pointed out a set of very handy Grunt plugins for image optimization and generation (which we will see Gulp equivalents of very soon I am sure):</p>
+
+<ul>
+<li><code>grunt-svgmin</code>  minimizes size etc. </li>
+<li><code>grunt-responsive-images</code> to retina-optimize images </li>
+<li><code>grunt-grunticon</code> will generate different size PNGs</li>
+<li><code>grunt-montage</code> creates sprites to reduce number of images</li>
+<li><a href="https://github.com/chrisgladd/grunt-phantomcss"><code>grunt-phantomcss</code></a> - CSS regression testing using PhantomJS. Can help you test different viewport sizes by creating screenshots. Like <code>grunt-photobox</code> kind of, but cooler.</li>
+</ul>
+
+<p>Lastly, she showed us some ninja <a href="http://sass-lang.com/">SASS</a> stuff which reminded me of how powerful SASS really is. Like media queries made easy using the <code>@content</code> tag:</p>
+<pre><code>    <span class="variable">@mixin</span> bp(<span class="variable">$point</span>) {
+
+      <span class="variable">$bp</span>-<span class="symbol">mobile:</span> <span class="string">"(max-width: 600px)"</span>;
+      <span class="variable">$bp</span>-<span class="symbol">notso:</span>  <span class="string">"(max-width: 1250px)"</span>;
+      <span class="variable">$bp</span>-<span class="symbol">fullon:</span> <span class="string">"(max-width: 1600px)"</span>;
+
+      <span class="variable">@if</span> <span class="variable">$point</span> == mq-fullon {
+        <span class="variable">@media</span> <span class="comment">#{$bp-fullon} { <span class="yardoctag">@content</span>; }</span>
+      }
+      <span class="variable">@else</span> <span class="keyword">if</span> <span class="variable">$point</span> == mq-notso {
+        <span class="variable">@media</span> <span class="comment">#{$bp-notso} { <span class="yardoctag">@content</span>; }</span>
+      }
+      <span class="variable">@else</span> <span class="keyword">if</span> <span class="variable">$point</span> == mq-mobile {
+        <span class="variable">@media</span> <span class="comment">#{$bp-mobile} { <span class="yardoctag">@content</span>; }</span>
+      } 
+    }
+</code></pre>
+<h2>Other trends and things I&rsquo;ll remember</h2>
+
+<ul>
+<li><strong>Reactive Javascript programming</strong> and Facebook&rsquo;s <a href="http://facebook.github.io/react/">React library</a> - just UI rendering, done simply. SPA feel without SPA bloat. Or something like that..</li>
+<li><strong>The <a href="https://www.meteor.com/">MeteorJS</a> full-stack framework</strong>. I&rsquo;ve been paying attention to Meteor for quite some time, but I was amazed at how quickly one can build a working app with it. It resonates with what I learned in the <a href="https://twitter.com/search?q=%23Frame&src=hash"  target="_blank">#Frame</a>workPride keynote - make choices for the developer - increase development speed. But Meteor is thinking differently about the whole webapp thing though. Watch out for this one.</li>
+<li><strong><a href="http://www.promisejs.org/">Promises</a></strong>. Makes code less error prone. Eliminates need to always explicitly handle error conditions. Use them. </li>
+</ul>
+
+<h2>In conclusion</h2>
+
+<p>Fluent had some technical issues initially - WiFi was pretty much useless the first day, which hurt the workshops. I find it amazing that they didn&rsquo;t get that right when they knew exactly how many people were coming. But I&rsquo;ll give &lsquo;em this - it isn&rsquo;t trivial to ensure bandwidth when 1000+ geeks sit down with their laptops and hit NPM with two hundred requests a minute, at the same time, all the time. There was even talk on twitter that Fluent had to apologize to GitHub for what apparently felt like a DoS attack to them.</p>
+
+<p>All in all, it was a great experience and a great conference. The speakers and content really was first class. I highly recommend it. And being in San Francisco never feels wrong, especially when the temperature beats my hometown&rsquo;s by about 20 degrees Celsius. </p>
+
+<p>Checkout the <a href="http://fluentconf.com/fluent2014/public/schedule/proceedings">speaker slides and videos</a> for plenty of informative, insightful, and funny material.</p>
+<div class="post-metadata bolded"><div class="iconwrapper"><div class="icon icon-calendar2"></div><span>Posted on Sat Mar 22 2014</span></div><div class="tags"><div class="icon icon-tags"></div><ul><li><a href="/tags/fluent2014.html">fluent2014</a>,</li><li><a href="/tags/trends.html">trends</a>,</li><li><a href="/tags/community.html">community</a></li></ul></div></div></div><!--If there are other posts with same tag, list them--><div class="disclaimer"><p>Disclaimer: <i>The posts on this site are my own and don't necessarily represent Accenture's positions, strategies, or opinions.</i></p></div></article><aside class="about"><section class="profile-pic"><img src="/images/aksel_gresvig.jpg" alt="Aksel Gresvig"/></section><section class="bio"><p>Developer, architect, JS evangelist, intrapreneur and life-long technophile.</p><p> 
+I work at <a href="http://www.accenture.com/no-en/Pages/index.aspx" target="_blank">Accenture </a>in <a href="https://www.google.no/maps/@59.9046669,10.7573027,13z" target="_blank">Oslo </a>where I help clients in many industries reach new potential leveraging the latest advancements in software.</p><p>I'm endlessly fascinated by the possibilities new tech gives us. </p><h3>-</h3></section><section class="social-links">   <ul><li><a target="_blank" href="https://twitter.com/agresvig" title="Twitter profile" class="icon icon-twitter2"></a></li><li><a target="_blank" href="https://github.com/AGresvig" title="GitHub profile" class="icon icon-github5"></a></li><li><a target="_blank" href="https://plus.google.com/u/0/+AkselGresvig?rel=author" title="Google Plus profile" class="icon icon-google-plus3"></a></li><li><a target="_blank" href="http://no.linkedin.com/in/akselgresvig" title="LinkedIn profile" class="icon icon-linkedin"> </a></li></ul></section></aside><footer id="comments"><div id="disqus_thread"></div></footer></section><!--for sticky footer--><div class="push"></div></div></div><div class="footer-container"><footer class="wrapper"><div class="info"><h2 class="title"><a href="/">Aksel Gresvig</a></h2><h5 class="subtitle">Created with passion</h5><div class="social-links"> <ul><li><a href="mailto:aksel@agresvig.com" title="Email me!" class="icon icon-mail4"></a></li><li><a target="_blank" href="https://twitter.com/agresvig" title="Twitter profile" class="icon icon-twitter3"></a></li><li><a target="_blank" href="https://github.com/AGresvig" title="GitHub profile" class="icon icon-github3"></a></li><li><a target="_blank" href="https://plus.google.com/u/0/+AkselGresvig?rel=author" title="Google Plus profile" class="icon icon-google-plus4"></a></li></ul></div></div><div class="techInfo"><p>Powered by <a target="_blank" href="http://nodejs.org/">Node.JS</a>, created using <a target="_blank" href="http://docpad.org/">DocPad</a>, hosted on <a target="_blank" href="http://pages.github.com/">GitHub pages</a></p></div></footer></div>
+
+        <script defer="defer"  src="/vendor/jquery-1.10.1.min.js"></script><script defer="defer"  src="/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script><script defer="defer"  src="/vendor/responsive-nav.js"></script><script defer="defer"  src="/scripts/main.js"></script><script defer="defer"  src="/scripts/disqus.js"></script><script defer="defer"  src="/scripts/addthis.js"></script><script defer="defer"  src="/scripts/ga.js"></script>
+    </body>
+</html>
