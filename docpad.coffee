@@ -1,7 +1,6 @@
 # DocPad Configuration File
 # http://docpad.org/docs/config
 
-#Aksel leker seg
 hl = require('highlight.js')
 
 # Define the DocPad Configuration
@@ -17,16 +16,11 @@ docpadConfig = {
             ]
 
             # The default title of our website
-            title: "Aksel Gresvig's Techblog"
+            title: "Aksel Gresvig's blog"
 
             # The website description (for SEO)
             description: """
-                The personal blog of developer Aksel Gresvig. A technical oriented blog on frontend and web technologies.
-                """
-
-            # The website keywords (for SEO) separated by commas
-            keywords: """
-                web development, frontend, javascript, node.js, nodejs, development, architecture, coffescript, java, mv*, docpad, backbone, angular
+                The personal blog of developer Aksel Gresvig. A technical oriented blog on frontend, web technologies, innovation & creativity.
                 """
 
             # The website author's name
@@ -34,6 +28,9 @@ docpadConfig = {
 
             # The website author's email
             email: "aksel@agresvig.com"
+
+            # Author google plus profile
+            googlePlus: "https://plus.google.com/+AkselGresvig/posts"
 
             # Your company's name
             copyright: "© AGresvig 2013"
@@ -61,6 +58,24 @@ docpadConfig = {
             ]
 
         getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title
+
+        # Get the prepared site/document description
+        getPreparedDescription: ->
+            # if we have a document description, then we should use that, otherwise use the site's description
+            @document.summary or @site.description
+
+        # Get the prepared site/document keywords
+        getPreparedKeywords: ->
+            # Merge the document keywords with the site keywords
+            @site.keywords.concat(@document.tags or []).join(', ')
+
+        # Get the prepared site/document description
+        getPreparedAuthor: ->
+            # if we have a document description, then we should use that, otherwise use the site's description
+            @document.author or @site.author
+
+        getGooglePlusLink: ->
+            @site.googlePlus
 
         getTagUrl: (tag) ->
             doc = docpad.getFile({tag:tag})
